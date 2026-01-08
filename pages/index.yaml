@@ -148,7 +148,7 @@ body:       |
       {% elif assignment.lower().startswith('challenge') %}
       {% set assignment_color = 'caution' %}
       {% elif assignment.lower().startswith('external') %}
-      {% set assignment_color = 'warning' %}
+      {% set assignment_color = 'special' %}
       {% else %}
       {% set assignment_color = 'default' %}
       {% endif %}
@@ -234,22 +234,27 @@ body:       |
         <tr class="info-bg">
           <td class="centered"><span class="badge primary-btn">Readings</span></td>
           <td>Weekly reading assignments.</td>
-          <td class="centered">4 &times; 1</td>
+          <td class="centered">10 &times; 1</td>
         </tr>
         <tr class="caution-bg">
-          <td class="centered"><span class="badge caution-btn">Homeworks</span></td>
+          <td class="centered"><span class="badge caution-btn">Challenges</span></td>
           <td>Weekly homework assignments.</td>
-          <td class="centered">4 &times; 1</td>
+          <td class="centered">20 &times; 1</td>
         </tr>
         <tr class="warning-bg">
-          <td class="centered"><span class="badge warning-btn">Interviews</span></td>
-          <td>Quarterly coding interviews.</td>
-          <td class="centered">4 &times; 1</td>
+          <td class="centered"><span class="badge warning-btn">Contests</span></td>
+          <td>Unit in-class contests.</td>
+          <td class="centered">2 &times; 1</td>
+        </tr>
+        <tr class="special-bg">
+          <td class="centered"><span class="badge special-btn">Externals</span></td>
+          <td>Unit external contests.</td>
+          <td class="centered">2 &times; 1</td>
         </tr>
         <tr class="danger-bg">
-          <td class="centered"><span class="badge danger-btn">Exams</span></td>
-          <td>Quarterly written exams.</td>
-          <td class="centered">3 &times; 11, 15</td>
+          <td class="centered"><span class="badge danger-btn">Interviews</span></td>
+          <td>Unit coding interviews.</td>
+          <td class="centered">2 &times; 13</td>
         </tr>
         <tr class="success-bg">
           <td class="centered" style="font-weight: bold;">Total</td>
