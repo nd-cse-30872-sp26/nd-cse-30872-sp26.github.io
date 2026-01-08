@@ -1,0 +1,24 @@
+- name:     Peter Bui
+  role:     Instructor
+  icon:     human-male-board
+  netid:    pbui
+  github:   pbui
+
+- name:     Verite Makuza
+  role:     Teaching Assistant
+  icon:     account-question
+  netid:    mmakuza
+  github:   veritem
+
+- name:     Mary Briamonte
+  role:     Teaching Assistant
+  icon:     account-question
+  netid:    mbriamon
+  github:   mbriamon
+
+- name:     Tommy Rozgonyi
+  role:     Teaching Assistant
+  icon:     account-question
+  netid:    trozgony
+  github:   trozgonyi1
+

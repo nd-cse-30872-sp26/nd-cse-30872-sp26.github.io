@@ -1,0 +1,283 @@
+- name:     "Unit 01: Data Structures and Algorithms"
+
+- name:     "I/O"
+  days:
+      - date:           Mon 01/12
+        topics:         Syllabus, I/O
+        assignments:
+          - Reading 00
+
+      - date:           Wed 01/14
+        topics:         Complexity
+
+      - date:           Fri 01/16
+        topics:         Coding Style
+        assignments:
+          - Challenge 00
+
+- name:     "Sequence Containers"
+  days:
+      - date:           Mon 01/19
+        topics:         '<i class="muted">Martin Luther King Day</i>'
+
+      - date:           Wed 01/21
+        topics:         Arrays, Lists
+        assignments:
+          - Reading 01
+
+      - date:           Fri 01/23
+        topics:         Stacks, Queues
+
+      - date:           Sat 01/24
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 01
+          - Challenge 02
+
+- name:     "Searching, Sorting"
+  days:
+      - date:           Mon 01/26
+        topics:         Searching
+        assignments:
+          - Reading 02
+
+      - date:           Wed 01/28
+        topics:         Sorting
+
+      - date:           Fri 01/30
+        topics:         ''
+        items:
+          - name:       Contest 01
+
+      - date:           Sat 01/31
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 03
+          - Challenge 04
+
+- name:     "Associative Containers"
+  days:
+      - date:           Mon 02/02
+        topics:         Maps, Sets
+        assignments:
+          - Reading 03
+
+      - date:           Wed 02/04
+        topics:         Memoization
+
+      - date:           Fri 02/06
+        topics:         History
+
+      - date:           Sat 02/07
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 05
+          - Challenge 06
+
+- name:     "Complete Search"
+  days:
+      - date:           Mon 02/09
+        topics:         Subsets
+        assignments:
+          - Reading 04
+
+      - date:           Wed 02/11
+        topics:         Permutations, Backtracking
+
+      - date:           Fri 02/13
+        topics:         Advent of Code I
+
+      - date:           Sat 02/14
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 07
+          - Challenge 08
+
+- name:     "Bit Manipulation, Greedy Algorithms"
+  days:
+      - date:           Mon 02/16
+        topics:         Bit Manipulation
+        assignments:
+          - Reading 05
+
+      - date:           Wed 02/18
+        topics:         Greedy Algorithms
+
+      - date:           Fri 02/20
+        items:
+          - name:       Contest 02
+
+      - date:           Sat 02/21
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 09
+          - Challenge 10
+
+- name:     "Dynamic Programming"
+  days:
+      - date:           Mon 02/23
+        topics:         Memoization (Again)
+        assignments:
+          - Reading 06
+
+      - date:           Wed 02/25
+        topics:         Table Building
+
+      - date:           Fri 02/27
+        topics:         Advent of Code II
+
+      - date:           Sat 02/28
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 11
+          - Challenge 12
+
+- name:     Coding Interview
+  days:
+      - date:           Mon 03/02
+        topics:         ''
+        items:
+          - name:       Interview 01
+
+      - date:           Wed 03/04
+        topics:         ''
+        items:
+          - name:       Interview 01
+
+      - date:           Fri 03/06
+        topics:         ''
+        items:
+          - name:       Interview 01
+        assignments:
+          - External 01
+
+- name:   "Spring Break"
+
+- name:   "Unit 02: Trees and Graphs"
+
+- name:   "Trees"
+  days:
+      - date:           Mon 03/16
+        topics:         Representation
+        assignments:
+          - Reading 07
+
+      - date:           Wed 03/18
+        topics:         Traversal
+
+      - date:           Fri 03/20
+        topics:         Divide and Conquer
+
+      - date:           Sat 03/21
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 13
+          - Challenge 14
+
+- name:   "Graphs I"
+  days:
+      - date:           Mon 03/23
+        topics:         Representation
+        assignments:
+          - Reading 08
+
+      - date:           Wed 03/25
+        topics:         Traversal
+
+      - date:           Fri 03/27
+        topics:         Advent of Code III
+
+      - date:           Sat 03/28
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 15
+          - Challenge 16
+
+- name:   "Graphs II"
+  days:
+      - date:           Mon 03/30
+        topics:         Shortest Paths
+        assignments:
+          - Reading 09
+
+      - date:           Wed 04/01
+        items:
+          - name:       Contest 03
+
+      - date:           Fri 04/03
+        topics:         '<i class="muted">Easter</i>'
+
+- name:   "Graphs II"
+  days:
+
+      - date:           Mon 04/06
+        topics:         '<i class="muted">Easter</i>'
+
+      - date:           Wed 04/08
+        topics:         Spanning Trees
+        assignments:
+          - Reading 10
+
+      - date:           Fri 04/10
+        topics:         Topological Sorting
+
+      - date:           Sat 04/11
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 17
+          - Challenge 18
+          - Challenge 19
+
+- name:   "Graphs III"
+  days:
+      - date:           Mon 04/13
+        topics:         Paths
+        assignments:
+          - Reading 11
+
+      - date:           Wed 04/15
+        topics:         Flows and Cuts
+
+      - date:           Fri 04/17
+        topics:         Advent of Code IV
+
+      - date:           Sat 04/18
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 20
+          - Challenge 21
+
+- name:   "Miscellaneous"
+  days:
+      - date:           Mon 04/20
+        topics:         Primes and Modular Arithmetic
+        assignments:
+          - Reading 12
+
+      - date:           Wed 04/22
+        topics:         Graduate School
+
+      - date:           Fri 04/24
+        topics:         ''
+        items:
+          - name:       Contest 04
+
+      - date:           Sat 04/25
+        topics:         '<i class="muted">Programming Challenges</i>'
+        assignments:
+          - Challenge 22
+          - Challenge 23
+
+- name:   "Coding Interviews"
+  days:
+      - date:           Mon 04/27
+        topics:         ''
+        items:
+          - name:       Interview 02
+
+      - date:           Wed 04/29
+        topics:         ''
+        items:
+          - name:       Interview 02
+        assignments:
+          - External 02
