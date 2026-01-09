@@ -1,0 +1,68 @@
+{
+    "q1": {
+        "type": "multiple",
+        "question": "\n<p>Which <b>programming languages</b> are normally supported in <b>programming\ncontest</b> environments?</p>\n",
+        "responses": {
+            "bash": "Bash",
+            "c": "C",
+            "cpp": "C++",
+            "perl": "Perl",
+            "python": "Python",
+            "ruby": "Ruby",
+            "java": "Java",
+            "js": "JavaScript"
+        }
+    },
+    "q2": {
+        "type": "order",
+        "question": "\n<p>Rank the following <b>complexity classes</b> from <b>lowest</b>\n(<i>fastest</i>) to <b>highest</b> (<i>slowest</i>).</p>\n",
+        "responses": {
+            "nf": "O(n!)",
+            "logn": "O(log(n))",
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "sqrtn": "O(sqrt(n))",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q3": {
+        "type": "single",
+        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    for (auto e : a) {\n        if (find(b.begin(), b.end(), e) != b.end()) {\n            c.push_back(e);\n        }\n    }\n}\n</pre>\n",
+        "responses": {
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q4": {
+        "type": "single",
+        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    sort(b.begin(), b.end());\n\n    for (auto e : a) {\n        if (binary_search(b.begin(), b.end(), e)) {\n            c.push_back(e);\n        }\n    }\n}\n</pre>\n",
+        "responses": {
+            "n2": "O(n^2)",
+            "1": "O(1)",
+            "n": "O(n)",
+            "nlogn": "O(nlog(n))"
+        }
+    },
+    "q5": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements about the course are true (<i>choose all\nthat apply</i>)?</p>\n",
+        "responses": {
+            "readings": "Students can drop at least one <b>reading</b> per <b>unit</b>.",
+            "challenges": "Students can drop at least one <b>challenge</b> per <b>unit</b>.",
+            "internal": "Students must pass all <b>internal programming contests</b>.",
+            "external": "Students must particpate in two <b>external programming contests</b>.",
+            "interviews": "Students must perform one <b>coding interview</b> per <b>unit</b>.",
+            "final": "There is a <b>final exam</b> in this course.",
+            "participation": "Students are expected to attend class <b>regularly</b> and <b>on-time</b>.",
+            "deadlines": "There are no <b>deadlines</b> in this class.",
+            "officehours": "There are in-person <b>office hours</b> and online help via <b>Slack</b> available to students.",
+            "consulting": "Students may <b>consult</b> online references or <b>copy</b> from <b>resources</b> if properly <b>cited</b>.",
+            "copying": "Students may <b>consult</b> or <b>copy</b> from <b>solutions</b> found online or from other students.",
+            "ai_consulting": "Students may <b>consult</b> ChatGPT, Co-Pilot, or other AI-based tools for explaining concepts, debugging problems, or as a reference.",
+            "ai_generating": "Students may <b>generate</b> <b>solutions</b> with ChatGPT, Co-Pilot, or other AI-based tools to do programming assignments."
+        }
+    }
+}

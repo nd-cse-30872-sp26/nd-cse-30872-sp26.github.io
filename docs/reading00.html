@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>Reading 00: Orientation, I/O</title>
+</head>
+<body>
+<header>
+<a class="logo" href="reading00.html">
+    <h1>Reading 00: Orientation, I/O</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html"><h4>Home</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<p><strong>Everyone</strong>:</p>
+<p>Welcome to <a href="index.html">CSE 30872 Programming Challenges</a>, which (as the syllabus
+states) is a "course that revolves around solving <em>brain-teaser</em> and
+<em>puzzle-type</em> problems that often appear in programming contests, online
+challenges, and job interviews".  What this means is that we will be
+studying common data structures, algorithms, and programming techniques
+that are useful in tackling a variety of problems.</p>
+<div class="alert info-bg">
+<h3 id="book-embed_icon-tldr"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book</title><path d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z" /></svg>
+</i> TL;DR<a class="headerlink" href="#book-embed_icon-tldr" title="Permanent link">&para;</a></h3>
+<p>For this week, you should familiarize yourself with using <a href="https://nd-cse.slack.com/">Slack</a>, setup
+your <a href="https://github.com">GitHub</a> assignments repository, read about I/O and complexity, and
+then submit your responses to the <a href="static/json/reading00.json">Reading 00 Quiz</a>.</p>
+</div>
+<h2 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">&para;</a></h2>
+<p>Before this course, most of you have taken <strong>Data Structures</strong> where you
+learned about the properties and characteristics of different data
+structures (and perhaps you even implemented a few).  The focus of this
+class, however, is not in the <em>construction</em> of these data structures, but
+rather their <em>application</em>.  This means we will focus on <em>when</em> to use
+these data structures and algorithms and <em>how</em> to utilize them effectively
+rather than <em>what</em> they are.  In concrete terms, we will not be
+implementing say a <a href="https://en.wikipedia.org/wiki/Hash_table">hash table</a>; instead we will use one to solve a variety
+of problems.</p>
+<p>Following the <a href="https://en.wikipedia.org/wiki/Hacker_ethic#Hands-On_Imperative">Hands-On Imperative</a>, you will have the opportunity to put
+the material we discuss in class into practice via a <em>respectful</em> number of
+weekly <strong>programming Challenges</strong> (<strong>two a week</strong>).  Along with these
+challenges will be <strong>Reading assignments</strong> to ensure you have a context or
+background knowledge for what we will be discussing in class.  As with
+<a href="https://www3.nd.edu/~pbui/teaching/cse.30872.sp25/">Systems Programming</a> or <a href="https://www3.nd.edu/~pbui/teaching/cse.30872.fa25/">Operating System Principles</a>, these assignments
+will be automatically graded by <a href="https://dredd.h4x0r.space">dredd</a> via the <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a>
+system provided by <a href="https://github.com">GitHub</a>.</p>
+<p>Although each class will involve some amount of lecture, there will also be
+a lot of in-class activities and hands-on learning.  Because of this, you
+are expected to come to class <strong>regularly</strong> and <strong>on-time</strong>.</p>
+<p>Fortunately, however, there are <strong>no exams</strong> in this class.  Instead, we
+will have <strong>four individual in-class programming contests</strong> and <strong>two
+programming interviews</strong> where you will have an opportunity to demonstrate
+your mastery and understanding of the material explored in class.
+Likewise, you will also have to participate in <strong>two external programming
+contests</strong> such as those provided by <a href="https://www.hackerrank.com/">HackerRank</a> or <a href="https://leetcode.com/">LeetCode</a>.</p>
+<h2 id="task-1-slack">Task 1: Slack<a class="headerlink" href="#task-1-slack" title="Permanent link">&para;</a></h2>
+<p>For communication outside of our classroom, we will be using <a href="https://nd-cse.slack.com/">Slack</a>,
+which is a real-time chat platform similar to <strong>Discord</strong>.  Your first task is
+to create a <strong>ND-CSE</strong> <a href="https://nd-cse.slack.com/">Slack</a> account (if you have not done so already)
+and join the <code>#cse-30872-sp26</code> channel:</p>
+<blockquote>
+<p><a href="https://nd-cse.slack.com/messages/cse-30872-sp26/">https://nd-cse.slack.com/messages/cse-30872-sp26/</a></p>
+</blockquote>
+<div class="alert info-bg">
+<h3 id="slack-embed_icon-slack-channel"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>slack</title><path d="M6,15A2,2 0 0,1 4,17A2,2 0 0,1 2,15A2,2 0 0,1 4,13H6V15M7,15A2,2 0 0,1 9,13A2,2 0 0,1 11,15V20A2,2 0 0,1 9,22A2,2 0 0,1 7,20V15M9,7A2,2 0 0,1 7,5A2,2 0 0,1 9,3A2,2 0 0,1 11,5V7H9M9,8A2,2 0 0,1 11,10A2,2 0 0,1 9,12H4A2,2 0 0,1 2,10A2,2 0 0,1 4,8H9M17,10A2,2 0 0,1 19,8A2,2 0 0,1 21,10A2,2 0 0,1 19,12H17V10M16,10A2,2 0 0,1 14,12A2,2 0 0,1 12,10V5A2,2 0 0,1 14,3A2,2 0 0,1 16,5V10M14,18A2,2 0 0,1 16,20A2,2 0 0,1 14,22A2,2 0 0,1 12,20V18H14M14,17A2,2 0 0,1 12,15A2,2 0 0,1 14,13H19A2,2 0 0,1 21,15A2,2 0 0,1 19,17H14Z" /></svg>
+</i> Slack Channel<a class="headerlink" href="#slack-embed_icon-slack-channel" title="Permanent link">&para;</a></h3>
+<p>There is a <a href="mailto:sp26-cse-30872-01-group@nd.edu">class mailing list</a>, but most day-to-day communication
+(including office hours and homework help) should take place on <a href="https://nd-cse.slack.com/">Slack</a>.</p>
+<p>Therefore, you should <strong>check this channel regularly</strong> as it is the primary
+means of communication for the course.</p>
+</div>
+<h2 id="task-2-github">Task 2: GitHub<a class="headerlink" href="#task-2-github" title="Permanent link">&para;</a></h2>
+<p>All of your work in this class will be submitted to <a href="https://github.com">GitHub</a> using <a href="https://git-scm.com/">git</a>.
+Your second task is to setup your <a href="https://github.com">GitHub</a> <strong>assignments</strong> repository by doing
+the following:</p>
+<ol>
+<li>
+<div class="flex-col">
+<p><strong>Sign-in</strong> or create a <a href="https://github.com">GitHub</a> account if you do not already have one.</p>
+<blockquote>
+<p><a href="https://github.com/join">https://github.com/join</a></p>
+</blockquote>
+<p>You may associate this account with either your Notre Dame or personal
+email address.  It is up to you.</p>
+</li>
+<li>
+<div class="flex-col">
+<p><strong>Fork</strong> the class assignments repository from the following template:</p>
+<blockquote>
+<p><a href="https://classroom.github.com/a/nJUwrO_H">https://classroom.github.com/a/nJUwrO_H</a></p>
+</blockquote>
+<p>This will create a <strong>private</strong> <code>assignments-$GITHUB_USERNAME</code>
+repository under your own account and linked to the <a href="https://github.com/nd-cse-30872-sp26">nd-cse-30872-sp26</a>
+organization.</p>
+</li>
+</ol>
+<div class="alert danger-bg">
+<h3 id="github-embed_icon-github-repository"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>github</title><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" /></svg>
+</i> GitHub Repository<a class="headerlink" href="#github-embed_icon-github-repository" title="Permanent link">&para;</a></h3>
+<p>The <strong>assignments</strong> repository will be used for your individual <strong>reading</strong>
+and <strong>challenge</strong> assignments. It must be kept <strong>private</strong> and only shared
+with the <strong>instructional staff</strong>.</p>
+</div>
+<h3 id="task-3-student-machines">Task 3: Student Machines<a class="headerlink" href="#task-3-student-machines" title="Permanent link">&para;</a></h3>
+<p>While you are free to use any machine you wish to do your work, the
+department provides a set of <strong>student machines</strong> that you can login to and
+do remote work in an environment crafted for the course.  The following
+steps allow you to <strong>clone</strong> the <strong>assigments</strong> you just created to any
+machine of your choosing.</p>
+<div class="alert info-bg">
+<h3 id="server-embed_icon-student-machines"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>server</title><path d="M4,1H20A1,1 0 0,1 21,2V6A1,1 0 0,1 20,7H4A1,1 0 0,1 3,6V2A1,1 0 0,1 4,1M4,9H20A1,1 0 0,1 21,10V14A1,1 0 0,1 20,15H4A1,1 0 0,1 3,14V10A1,1 0 0,1 4,9M4,17H20A1,1 0 0,1 21,18V22A1,1 0 0,1 20,23H4A1,1 0 0,1 3,22V18A1,1 0 0,1 4,17M9,5H10V3H9V5M9,13H10V11H9V13M9,21H10V19H9V21M5,3V5H7V3H5M5,11V13H7V11H5M5,19V21H7V19H5Z" /></svg>
+</i> Student Machines<a class="headerlink" href="#server-embed_icon-student-machines" title="Permanent link">&para;</a></h3>
+<p>As a reminder, students in this class have access to the following
+<strong>student</strong> machines: <code>student05.cse.nd.edu</code>, <code>student10.cse.nd.edu</code>,
+<code>student11.cse.nd.edu</code>, <code>student12.cse.nd.edu</code>, <code>student13.cse.nd.edu</code>.</p>
+</div>
+<ol>
+<li>
+<div class="flex-col">
+<p>Before you can <strong>clone</strong> your <a href="https://git-scm.com/">git</a> repository, you will need to
+determine which form of <strong>authentication</strong>, you wish to use with
+<a href="https://github.com">GitHub</a>.</p>
+<p>To remotely access your repository from the command-line, you have two options:</p>
+<ol>
+<li>
+<div class="flex-col">
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh">Setup SSH Keys</a>: With this method, you generate a local public and
+private key pair on your computer and then upload the <strong>public
+key</strong> to <a href="https://github.com">GitHub</a>.  When accessing <a href="https://github.com">GitHub</a> from the
+command-line, you will use the <strong>private key</strong> to authenticate to
+the server.</p>
+<p>This is the <strong>recommended</strong> way to setup your repository as it will
+allow for <strong>passwordless</strong> access.</p>
+</li>
+<li>
+<p><a href="https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token">Setup a Personal Access Token</a>: With this method, <a href="https://github.com">GitHub</a> will
+  generate an application specific passsword that you can use with
+  <strong>HTTPS</strong>.  As the <strong>PAT</strong> is a long string of characters, it is
+  recommended that you use it in conjunction with a <strong>password
+  manager</strong> or <strong>keyring</strong>.</p>
+</li>
+</ol>
+<div class="alert success-bg" markdown="1">
+<h3 id="key-chain-embed_icon-setup-ssh-keys"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>key-chain</title><path d="M12.67 13.67C12.2 14.13 11.63 14.5 11 14.73V23H8V21H5V18H8V14.72C6.26 14.1 5 12.46 5 10.5C5 8 7 6 9.5 6C9.54 6 9.57 6 9.6 6C9.13 6.95 8.92 8 9.03 9.08C8.44 9.28 8 9.84 8 10.5C8 11.33 8.67 12 9.5 12C9.73 12 9.95 11.94 10.15 11.85C10.79 12.69 11.67 13.32 12.67 13.67M20.73 19.44L17.97 20.6L17.19 18.76L14.43 19.93L13.26 17.16L16.03 16L14.76 13C12.91 13.08 11.11 12.05 10.35 10.25C9.39 7.96 10.47 5.32 12.76 4.35C13 4.25 13.26 4.18 13.5 4.12C12.84 2.87 11.5 2 10 2C7.79 2 6 3.79 6 6C6 6.08 6 6.16 6 6.24C5.7 6.5 5.4 6.82 5.15 7.15C5.06 6.78 5 6.4 5 6C5 3.24 7.24 1 10 1S15 3.24 15 6C15 7.42 14.4 8.67 13.45 9.57C13.87 10 14.5 10.13 15.08 9.88C15.85 9.56 16.2 8.68 15.88 7.92C15.85 7.83 15.8 7.74 15.74 7.66C15.9 7.13 16 6.58 16 6C16 5.37 15.9 4.76 15.72 4.19C17 4.55 18.1 5.44 18.65 6.76C19.41 8.56 18.89 10.57 17.5 11.81L20.73 19.44M13 8.6C13.37 8.19 13.65 7.71 13.82 7.18C13.28 7.45 12.97 8 13 8.6Z" /></svg>
+</i> Setup SSH Keys<a class="headerlink" href="#key-chain-embed_icon-setup-ssh-keys" title="Permanent link">&para;</a></h3>
+<div class="alert warning-bg" markdown="1">
+<p><strong>Note</strong>: If you have already <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh">Setup SSH Keys</a> in another course (such
+as <strong>Systems Programming</strong>), you <strong>do not</strong> need to make new keys and
+can skip this process.</p>
+</div>
+<p>Here is a quick tutorial on how to <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh">Setup SSH Keys</a> on the <strong>student
+machines</strong> (<em>if you have not done so already</em>):</p>
+<ol>
+<li>
+<div class="flex-col">
+<p>Generate SSH keys if you don't have them yet:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Accept the defaults, don&#39;t make a password if you want to go passwordless</span>
+$<span class="w"> </span>ssh-keygen
+</code></pre></div>
+
+</li>
+<li>
+<div class="flex-col">
+<p>Copy the contents of <code>~/.ssh/id_rsa.pub</code> to the <strong>SSH Keys</strong> section of
+your <a href="https://github.com">GitHub</a> settings page:</p>
+<blockquote>
+<p><a href="https://github.com/settings/keys">https://github.com/settings/keys</a></p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Copy and paste the contents of this file into GitHub</span>
+$<span class="w"> </span>cat<span class="w"> </span>~/.ssh/id_rsa.pub
+</code></pre></div>
+
+</li>
+<li>
+<div class="flex-col">
+<p>Edit/create <code>~/.ssh/config</code> to use this key with <a href="https://github.com">GitHub</a>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Add the following to your config (replace $NETID with your netid)</span>
+$<span class="w"> </span>vim<span class="w"> </span>~/.ssh/config
+Host<span class="w"> </span>github.com
+<span class="w">        </span>User<span class="w"> </span>git
+<span class="w">        </span>Hostname<span class="w"> </span>github.com
+<span class="w">        </span>PreferredAuthentications<span class="w"> </span>publickey
+<span class="w">        </span>IdentityFile<span class="w"> </span>/escnfs/home/<span class="nv">$NETID</span>/.ssh/id_rsa
+</code></pre></div>
+
+</li>
+</ol>
+<p>Once this is done, you should be able to do <a href="https://git-scm.com/">git</a> operations without a password.
+You will need to accept the host key the first time by typing in <code>"yes"</code>.
+</div></p>
+</li>
+<li>
+<div class="flex-col">
+<p><strong>Clone</strong> your <a href="https://git-scm.com/">git</a> repository on one of the <strong>student machines</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Example of cloning GitHub assignments repository to local or student machine</span>
+$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:nd-cse-30872-sp26/assignments-<span class="nv">$GITHUB_USERNAME</span>.git
+remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">70</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">70</span>/70<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">13</span>/13<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">70</span>/70<span class="o">)</span>,<span class="w"> </span><span class="m">6</span>.25<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">1</span>.56<span class="w"> </span>MiB/s,<span class="w"> </span><span class="k">done</span>.
+Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">4</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">70</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">4</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+
+</li>
+<li>
+<div class="flex-col">
+<p><strong>Edit</strong> the <code>README.md</code> file in your <strong>assignments</strong> repository such
+that the <strong>Name</strong> and <strong>NetID</strong> fields are completed (i.e. replace
+"Domer McDomerson" and "dmcdomer"). You should <strong>commit</strong> your change
+and then <strong>push</strong> them to <a href="https://github.com">GitHub</a>.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Example on editing README in assignments repository and pushing changes to GitHub</span>
+
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>assignments-<span class="nv">$GITHUB_USERNAME</span><span class="w">           </span><span class="c1"># Go into the assignments directory</span>
+
+$<span class="w"> </span>nano<span class="w"> </span>README.md<span class="w">                            </span><span class="c1"># Edit the README.md file</span>
+
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w">                         </span><span class="c1"># Mark the file for recording</span>
+
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update README&quot;</span><span class="w">             </span><span class="c1"># Record the change</span>
+<span class="o">[</span>master<span class="w"> </span>c550fa1<span class="o">]</span><span class="w"> </span>Update<span class="w"> </span>README
+<span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">2</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">2</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w">                                  </span><span class="c1"># Send your local changes to GitHub</span>
+</code></pre></div>
+
+</li>
+</ol>
+<h2 id="task-4-readings">Task 4: Readings<a class="headerlink" href="#task-4-readings" title="Permanent link">&para;</a></h2>
+<p>The readings for <strong>Monday, January 12</strong> are</p>
+<ol>
+<li>
+<p><a href="index.html">CSE 30872 Programming Challenges (Spring 2026)</a></p>
+</li>
+<li>
+<div class="flex-col">
+<p><a href="https://cses.fi/book.html">Competitive Programmer's Handbook</a></p>
+<ul>
+<li>
+<p>Chapter 1 Introduction</p>
+</li>
+<li>
+<p>Chapter 2 Time Complexity</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="alert success-bg">
+<p><strong>Note</strong>: Don't worry if you don't get the readings done by Monday, as
+this is the first week of class.</p>
+</div>
+<h2 id="task-5-quiz">Task 5: Quiz<a class="headerlink" href="#task-5-quiz" title="Permanent link">&para;</a></h2>
+<p>Once you have done the readings, answer the following <a href="static/json/reading00.json">Reading 00 Quiz</a>
+questions:</p>
+<div id="quiz-questions"></div>
+
+<div id="quiz-responses"></div>
+
+<script src="static/js/dredd-quiz.js"></script>
+<script>
+loadQuiz('static/json/reading00.json');
+</script>
+
+<pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+<p>To submit your answers, you will need create a <code>answers.json</code> or
+<code>answers.yaml</code> file in the <code>reading00</code> folder of your <strong>assignments</strong>
+repository:</p>
+<ol>
+<li>
+<div class="flex-col">
+<p>For this class, you must use a <strong>separate <a href="https://git-scm.com/">git</a> branch for each
+assignment</strong>.  This means that the work for each reading and challenge
+must be done in a separate branch.  To create and checkout a new
+branch, you can do the following:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>master<span class="w">         </span><span class="c1"># Make sure we are in master branch</span>
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w">           </span><span class="c1"># Make sure we are up-to-date with github repository</span>
+
+$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>reading00<span class="w">   </span><span class="c1"># Create reading00 branch and check it out</span>
+</code></pre></div>
+
+<p>Once you do the above, you should see the following output for the
+<a href="https://git-scm.com/docs/git-branch">git-branch</a> command:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>branch
+<span class="w">  </span>master
+*<span class="w"> </span>reading00
+</code></pre></div>
+
+<p>The <code>*</code> indicates that we are currently on the <code>reading00</code> branch.</p>
+</li>
+<li>
+<div class="flex-col">
+<p>You can either hand-write the <code>answers</code> file using your favorite text
+editor or you can use the online form to generate the <a href="https://json.org">JSON</a> data.</p>
+<p>A hand-written <code>answers.yaml</code> may look like the following:</p>
+<div class="codehilite"><pre><span></span><code>q1:     [python,perl,ruby]
+q2:     [n2,nf,nlogn,1,n,sqrtn,logn]
+q3:     n
+q4:     n
+</code></pre></div>
+
+<p>The equivalent <code>answers.json</code> generated using the online form may look
+like the following:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;q1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;python&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;perl&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ruby&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;q2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;n2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;nf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;nlogn&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;n&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;sqrtn&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;logn&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;q3&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;n&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;q4&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;n&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>You may use either format.  To determine which symbols correspond to
+which response, take a look at the <a href="static/json/reading00.json">Reading 00 Quiz</a> file.</p>
+<p>To check your answers, you can use the provided <code>.scripts/check.py</code>
+script:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>reading00<span class="w">                        </span><span class="c1"># Go into reading00 folder</span>
+$<span class="w"> </span><span class="nv">$EDITOR</span><span class="w"> </span>answers.json<span class="w">                </span><span class="c1"># Edit your answers.json file</span>
+
+$<span class="w"> </span>../.scripts/check.py<span class="w">                </span><span class="c1"># Submit reading00</span>
+Checking<span class="w"> </span>reading00<span class="w"> </span>quiz<span class="w"> </span>...
+<span class="w">      </span>Q1<span class="w">  </span><span class="m">4</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">4</span>.00
+<span class="w">      </span>Q2<span class="w">  </span><span class="m">7</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">7</span>.00
+<span class="w">      </span>Q3<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+<span class="w">      </span>Q4<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+<span class="w">      </span>Q5<span class="w">  </span><span class="m">8</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">8</span>.00
+<span class="w">  </span>--------------------
+<span class="w">   </span>Score<span class="w"> </span><span class="m">21</span>.00<span class="w"> </span>/<span class="w"> </span><span class="m">21</span>.00
+<span class="w">   </span>Grade<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+<span class="w">  </span>Status<span class="w"> </span>Success
+</code></pre></div>
+
+<p>This script will check your responses by sending your
+<code>reading00/answers.json</code> file to <a href="https://dredd.h4x0r.space">dredd</a>, which is the automated grading
+system. <a href="https://dredd.h4x0r.space">dredd</a> will take your answers and return to you a score and
+overall status as shown above.</p>
+<div class="alert success-bg" markdown="1">
+<p><strong>Note</strong>: <code>Score</code> is how many points you received out of the maximum
+number of attempted points, while <code>Grade</code> is the amount of normalized
+points that will be recorded on <strong>Canvas</strong>.</p>
+<p>Moreover, <code>Status</code> is <code>Success</code> if you have achieved full credit
+(otherwise, it will show <code>Failure</code>).</p>
+</div>
+</li>
+<li>
+<div class="flex-col">
+<p>Once you have your answers file, you need to add, commit the file, and
+push your commits to <a href="https://github.com">GitHub</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>answers.json<span class="w">                </span><span class="c1"># Add answers.json to staging area</span>
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Reading 00: Quiz&quot;</span><span class="w">    </span><span class="c1"># Commit work</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>reading00<span class="w">        </span><span class="c1"># Push branch to GitHub</span>
+</code></pre></div>
+
+<div class="alert success-bg" markdown="1">
+<h3 id="git-embed_icon-iterative-approach"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>git</title><path d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" /></svg>
+</i> Iterative Approach<a class="headerlink" href="#git-embed_icon-iterative-approach" title="Permanent link">&para;</a></h3>
+<p>You may edit and commit changes to your branch as many times as you wish.
+Just make sure all of your work goes in the appropriate branch and then
+perform a <code>git push</code> when you are done.
+</div></p>
+</li>
+<li>
+<div class="flex-col">
+<p>When you are ready for your final submission, you need to create a
+<strong>pull request</strong> via the <a href="https://github.com">GitHub</a> interface:</p>
+<ul>
+<li>
+<div class="flex-col">
+<p>First, go to your repository's <strong>Branches</strong> page and then press the
+<strong>New pull request</strong> button for the appropriate branch:</p>
+<p><div class="centered">
+  <img src="static/img/reading00-github-branches.png" class="responsive"/>
+</div></p>
+</li>
+<li>
+<div class="flex-col">
+<p>Next, edit the <strong>Pull Request</strong> title to "Reading 00", write a
+comment if necessary, assign the appropriate <strong>TA</strong> from the
+<a href="reading00_tas.html">Reading 00 TA List</a>, and then press the "Create pull request"
+button.</p>
+<p><div class="centered">
+  <img src="static/img/reading00-github-pull-request.png" class="responsive"/>
+</div></p>
+<div class="alert danger-bg" markdown="1">
+<h3 id="close-octogon-embed_icon-dont-merge"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-octagon</title><path d="M8.27,3L3,8.27V15.73L8.27,21H15.73L21,15.73V8.27L15.73,3M8.41,7L12,10.59L15.59,7L17,8.41L13.41,12L17,15.59L15.59,17L12,13.41L8.41,17L7,15.59L10.59,12L7,8.41" /></svg>
+</i> Don't Merge!<a class="headerlink" href="#close-octogon-embed_icon-dont-merge" title="Permanent link">&para;</a></h3>
+<p><strong>DO NOT MERGE your own Pull Requests</strong>.  The TAs use open <strong>Pull Requests</strong>
+to keep track of which assignments to grade.  Closing them yourself will
+confuse the TAs and cause a delay in grading.</p>
+</div>
+</li>
+<li>
+<div class="flex-col">
+<p>Every commit on <a href="https://github.com">GitHub</a> will automatically check your quiz or code
+with <a href="https://dredd.h4x0r.space">dredd</a> and the results of each run is displayed in the <strong>Checks</strong>
+tab of each commit as shown below:</p>
+<p><div class="centered">
+  <img src="static/img/reading00-github-checks.png" class="responsive"/>
+</div></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Once you have made the <strong>Pull Request</strong>, the TA can verify your work and
+  provide feedback via the discussion form inside the <strong>Pull Request</strong>. If
+  necessary, you can update your submission by simply commit and pushing to
+  the appropriate branch; the <strong>Pull Request</strong> will automatically be
+  updated to match your latest work.</p>
+<div class="alert warning-bg">
+<h3 id="lifebuoy-embed_icon-acknowledgments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lifebuoy</title><path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+</i> Acknowledgments<a class="headerlink" href="#lifebuoy-embed_icon-acknowledgments" title="Permanent link">&para;</a></h3>
+<p>If you collaborated with any other students, or received help from TAs or AI
+tools on this assignment, please record this support in the <code>README.md</code> in
+the <code>reading00</code> folder and include it with your <strong>Pull Request</strong>.</p>
+</div>
+<div class="alert success-bg">
+<h3 id="account-question-embed_icon-graders"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-question</title><path d="M13,8A4,4 0 0,1 9,12A4,4 0 0,1 5,8A4,4 0 0,1 9,4A4,4 0 0,1 13,8M17,18V20H1V18C1,15.79 4.58,14 9,14C13.42,14 17,15.79 17,18M20.5,14.5V16H19V14.5H20.5M18.5,9.5H17V9A3,3 0 0,1 20,6A3,3 0 0,1 23,9C23,9.97 22.5,10.88 21.71,11.41L21.41,11.6C20.84,12 20.5,12.61 20.5,13.3V13.5H19V13.3C19,12.11 19.6,11 20.59,10.35L20.88,10.16C21.27,9.9 21.5,9.47 21.5,9A1.5,1.5 0 0,0 20,7.5A1.5,1.5 0 0,0 18.5,9V9.5Z" /></svg>
+</i> Graders<a class="headerlink" href="#account-question-embed_icon-graders" title="Permanent link">&para;</a></h3>
+<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the appropriate <strong>teaching
+assistant</strong> from the <a href="reading00_tas.html">Reading 00 TA List</a>.</p>
+<p><strong>Note</strong>: this list changes each week, so be sure to consult the appropriate
+list for each assignment.</p>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>
