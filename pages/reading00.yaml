@@ -1,0 +1,500 @@
+title:      "Reading 00: Orientation, I/O"
+body:       |
+
+    **Everyone**:
+
+    Welcome to [CSE 30872 Programming Challenges], which (as the syllabus
+    states) is a "course that revolves around solving *brain-teaser* and
+    *puzzle-type* problems that often appear in programming contests, online
+    challenges, and job interviews".  What this means is that we will be
+    studying common data structures, algorithms, and programming techniques
+    that are useful in tackling a variety of problems.
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "book" | embed_icon }}</i> TL;DR
+
+    For this week, you should familiarize yourself with using [Slack], setup
+    your [GitHub] assignments repository, read about I/O and complexity, and
+    then submit your responses to the [Reading 00 Quiz].
+
+    </div>
+
+    ## Course Overview
+
+    Before this course, most of you have taken **Data Structures** where you
+    learned about the properties and characteristics of different data
+    structures (and perhaps you even implemented a few).  The focus of this
+    class, however, is not in the *construction* of these data structures, but
+    rather their *application*.  This means we will focus on *when* to use
+    these data structures and algorithms and *how* to utilize them effectively
+    rather than *what* they are.  In concrete terms, we will not be
+    implementing say a [hash table]; instead we will use one to solve a variety
+    of problems.
+
+    Following the [Hands-On Imperative], you will have the opportunity to put
+    the material we discuss in class into practice via a *respectful* number of
+    weekly **programming Challenges** (**two a week**).  Along with these
+    challenges will be **Reading assignments** to ensure you have a context or
+    background knowledge for what we will be discussing in class.  As with
+    [Systems Programming] or [Operating System Principles], these assignments
+    will be automatically graded by [dredd] via the [continuous integration]
+    system provided by [GitHub].
+
+    Although each class will involve some amount of lecture, there will also be
+    a lot of in-class activities and hands-on learning.  Because of this, you
+    are expected to come to class **regularly** and **on-time**.
+
+    Fortunately, however, there are **no exams** in this class.  Instead, we
+    will have **four individual in-class programming contests** and **two
+    programming interviews** where you will have an opportunity to demonstrate
+    your mastery and understanding of the material explored in class.
+    Likewise, you will also have to participate in **two external programming
+    contests** such as those provided by [HackerRank] or [LeetCode].
+
+    [Hands-On Imperative]: https://en.wikipedia.org/wiki/Hacker_ethic#Hands-On_Imperative
+    [Continuous Integration]: https://en.wikipedia.org/wiki/Continuous_integration
+    [hash table]: https://en.wikipedia.org/wiki/Hash_table
+    [Systems Programming]: https://www3.nd.edu/~pbui/teaching/cse.30872.sp25/
+    [Operating System Principles]: https://www3.nd.edu/~pbui/teaching/cse.30872.fa25/
+
+    ## Task 1: Slack
+
+    For communication outside of our classroom, we will be using [Slack],
+    which is a real-time chat platform similar to **Discord**.  Your first task is
+    to create a **ND-CSE** [Slack] account (if you have not done so already)
+    and join the `#cse-30872-sp26` channel:
+
+    > [https://nd-cse.slack.com/messages/cse-30872-sp26/](https://nd-cse.slack.com/messages/cse-30872-sp26/)
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "slack" | embed_icon }}</i> Slack Channel
+
+    There is a [class mailing list], but most day-to-day communication
+    (including office hours and homework help) should take place on [Slack].
+
+    Therefore, you should **check this channel regularly** as it is the primary
+    means of communication for the course.
+
+    </div>
+
+    [Slack]: https://nd-cse.slack.com
+    [class mailing list]: mailto:sp26-cse-30872-01-group@nd.edu
+
+    ## Task 2: GitHub
+
+    All of your work in this class will be submitted to [GitHub] using [git].
+    Your second task is to setup your [GitHub] **assignments** repository by doing
+    the following:
+
+    1.  <div class="flex-col">
+
+        **Sign-in** or create a [GitHub] account if you do not already have one.
+
+        > [https://github.com/join](https://github.com/join)
+
+        You may associate this account with either your Notre Dame or personal
+        email address.  It is up to you.
+
+    2.  <div class="flex-col">
+
+        **Fork** the class assignments repository from the following template:
+
+        > [https://classroom.github.com/a/nJUwrO_H](https://classroom.github.com/a/nJUwrO_H)
+
+        This will create a **private** `assignments-$GITHUB_USERNAME`
+        repository under your own account and linked to the [nd-cse-30872-sp26]
+        organization.
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "github" | embed_icon }}</i> GitHub Repository
+
+    The **assignments** repository will be used for your individual **reading**
+    and **challenge** assignments. It must be kept **private** and only shared
+    with the **instructional staff**.
+
+    </div>
+
+    [git]: https://git-scm.com/
+
+    ### Task 3: Student Machines
+
+    While you are free to use any machine you wish to do your work, the
+    department provides a set of **student machines** that you can login to and
+    do remote work in an environment crafted for the course.  The following
+    steps allow you to **clone** the **assigments** you just created to any
+    machine of your choosing.
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "server" | embed_icon }}</i> Student Machines
+
+    As a reminder, students in this class have access to the following
+    **student** machines: `student05.cse.nd.edu`, `student10.cse.nd.edu`,
+    `student11.cse.nd.edu`, `student12.cse.nd.edu`, `student13.cse.nd.edu`.
+
+    </div>
+
+    1.  <div class="flex-col">
+
+        Before you can **clone** your [git] repository, you will need to
+        determine which form of **authentication**, you wish to use with
+        [GitHub].
+
+        To remotely access your repository from the command-line, you have two options:
+
+        1.  <div class="flex-col">
+
+            [Setup SSH Keys]: With this method, you generate a local public and
+            private key pair on your computer and then upload the **public
+            key** to [GitHub].  When accessing [GitHub] from the
+            command-line, you will use the **private key** to authenticate to
+            the server.
+
+            This is the **recommended** way to setup your repository as it will
+            allow for **passwordless** access.
+
+        2. [Setup a Personal Access Token]: With this method, [GitHub] will
+          generate an application specific passsword that you can use with
+          **HTTPS**.  As the **PAT** is a long string of characters, it is
+          recommended that you use it in conjunction with a **password
+          manager** or **keyring**.
+
+        <div class="alert success-bg" markdown="1">
+
+        ### <i class="icon icon-medium">{{ "key-chain" | embed_icon }}</i> Setup SSH Keys
+
+        <div class="alert warning-bg" markdown="1">
+
+        **Note**: If you have already [Setup SSH Keys] in another course (such
+        as **Systems Programming**), you **do not** need to make new keys and
+        can skip this process.
+
+        </div>
+
+        Here is a quick tutorial on how to [Setup SSH Keys] on the **student
+        machines** (*if you have not done so already*):
+
+        1.  <div class="flex-col">
+
+            Generate SSH keys if you don't have them yet:
+
+                :::bash
+                # Accept the defaults, don't make a password if you want to go passwordless
+                $ ssh-keygen
+
+        2.  <div class="flex-col">
+
+            Copy the contents of `~/.ssh/id_rsa.pub` to the **SSH Keys** section of
+            your [GitHub] settings page:
+
+            > [https://github.com/settings/keys](https://github.com/settings/keys)
+
+                :::bash
+                # Copy and paste the contents of this file into GitHub
+                $ cat ~/.ssh/id_rsa.pub
+
+        3.  <div class="flex-col">
+
+            Edit/create `~/.ssh/config` to use this key with [GitHub]:
+
+                :::bash
+                # Add the following to your config (replace $NETID with your netid)
+                $ vim ~/.ssh/config
+                Host github.com
+                        User git
+                        Hostname github.com
+                        PreferredAuthentications publickey
+                        IdentityFile /escnfs/home/$NETID/.ssh/id_rsa
+
+        Once this is done, you should be able to do [git] operations without a password.
+        You will need to accept the host key the first time by typing in `"yes"`.
+        </div>
+
+    2.  <div class="flex-col">
+
+        **Clone** your [git] repository on one of the **student machines**:
+
+            :::bash
+            # Example of cloning GitHub assignments repository to local or student machine
+            $ git clone git@github.com:nd-cse-30872-sp26/assignments-$GITHUB_USERNAME.git
+            remote: Enumerating objects: 70, done.
+            remote: Counting objects: 100% (70/70), done.
+            remote: Compressing objects: 100% (13/13), done.
+            Receiving objects: 100% (70/70), 6.25 KiB | 1.56 MiB/s, done.
+            Resolving deltas: 100% (4/4), done.
+            remote: Total 70 (delta 4), reused 70 (delta 4), pack-reused 0
+
+    3.  <div class="flex-col">
+
+        **Edit** the `README.md` file in your **assignments** repository such
+        that the **Name** and **NetID** fields are completed (i.e. replace
+        "Domer McDomerson" and "dmcdomer"). You should **commit** your change
+        and then **push** them to [GitHub].
+
+            :::bash
+            # Example on editing README in assignments repository and pushing changes to GitHub
+
+            $ cd assignments-$GITHUB_USERNAME           # Go into the assignments directory
+
+            $ nano README.md                            # Edit the README.md file
+
+            $ git add README.md                         # Mark the file for recording
+
+            $ git commit -m "Update README"             # Record the change
+            [master c550fa1] Update README
+            1 file changed, 2 insertions(+), 2 deletions(-)
+
+            $ git push                                  # Send your local changes to GitHub
+
+    [password authentication]: https://github.blog/changelog/2021-08-12-git-password-authentication-is-shutting-down/
+    [Setup a Personal Access Token]: https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+    [Setup SSH Keys]: https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh
+
+    ## Task 4: Readings
+
+    The readings for **Monday, January 12** are
+
+    1. [CSE 30872 Programming Challenges (Spring 2026)](index.html)
+
+    2.  <div class="flex-col">
+
+        [Competitive Programmer's Handbook]
+
+        - Chapter 1 Introduction
+
+        - Chapter 2 Time Complexity
+
+    <div class="alert success-bg" markdown="1">
+    **Note**: Don't worry if you don't get the readings done by Monday, as
+    this is the first week of class.
+    </div>
+
+    ## Task 5: Quiz
+
+    Once you have done the readings, answer the following [Reading 00 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading00.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    To submit your answers, you will need create a `answers.json` or
+    `answers.yaml` file in the `reading00` folder of your **assignments**
+    repository:
+
+    1.  <div class="flex-col">
+
+        For this class, you must use a **separate [git] branch for each
+        assignment**.  This means that the work for each reading and challenge
+        must be done in a separate branch.  To create and checkout a new
+        branch, you can do the following:
+
+            :::bash
+            $ git checkout master         # Make sure we are in master branch
+            $ git pull --rebase           # Make sure we are up-to-date with github repository
+
+            $ git checkout -b reading00   # Create reading00 branch and check it out
+
+        Once you do the above, you should see the following output for the
+        [git-branch] command:
+
+            :::bash
+            $ git branch
+              master
+            * reading00
+
+        The `*` indicates that we are currently on the `reading00` branch.
+
+    2.  <div class="flex-col">
+
+        You can either hand-write the `answers` file using your favorite text
+        editor or you can use the online form to generate the [JSON] data.
+
+        A hand-written `answers.yaml` may look like the following:
+
+            :::text
+            q1:     [python,perl,ruby]
+            q2:     [n2,nf,nlogn,1,n,sqrtn,logn]
+            q3:     n
+            q4:     n
+
+        The equivalent `answers.json` generated using the online form may look
+        like the following:
+
+            :::json
+            {
+              "q1": [
+                "python",
+                "perl",
+                "ruby"
+              ],
+              "q2": [
+                "n2",
+                "nf",
+                "nlogn",
+                "1",
+                "n",
+                "sqrtn",
+                "logn"
+              ],
+              "q3": "n",
+              "q4": "n"
+            }
+
+        You may use either format.  To determine which symbols correspond to
+        which response, take a look at the [Reading 00 Quiz] file.
+
+        To check your answers, you can use the provided `.scripts/check.py`
+        script:
+
+            :::bash
+            $ cd reading00                        # Go into reading00 folder
+            $ $EDITOR answers.json                # Edit your answers.json file
+
+            $ ../.scripts/check.py                # Submit reading00
+            Checking reading00 quiz ...
+                  Q1  4.00 /  4.00
+                  Q2  7.00 /  7.00
+                  Q3  1.00 /  1.00
+                  Q4  1.00 /  1.00
+                  Q5  8.00 /  8.00
+              --------------------
+               Score 21.00 / 21.00
+               Grade  1.00 /  1.00
+              Status Success
+
+        This script will check your responses by sending your
+        `reading00/answers.json` file to [dredd], which is the automated grading
+        system. [dredd] will take your answers and return to you a score and
+        overall status as shown above.
+
+        <div class="alert success-bg" markdown="1">
+
+        **Note**: `Score` is how many points you received out of the maximum
+        number of attempted points, while `Grade` is the amount of normalized
+        points that will be recorded on **Canvas**.
+
+        Moreover, `Status` is `Success` if you have achieved full credit
+        (otherwise, it will show `Failure`).
+
+        </div>
+
+    3.  <div class="flex-col">
+
+        Once you have your answers file, you need to add, commit the file, and
+        push your commits to [GitHub]:
+
+            :::bash
+            $ git add answers.json                # Add answers.json to staging area
+            $ git commit -m "Reading 00: Quiz"    # Commit work
+
+            $ git push -u origin reading00        # Push branch to GitHub
+
+
+        <div class="alert success-bg" markdown="1">
+
+        ### <i class="icon icon-medium">{{ "git" | embed_icon }}</i> Iterative Approach
+
+        You may edit and commit changes to your branch as many times as you wish.
+        Just make sure all of your work goes in the appropriate branch and then
+        perform a `git push` when you are done.
+        </div>
+
+    4.  <div class="flex-col">
+
+        When you are ready for your final submission, you need to create a
+        **pull request** via the [GitHub] interface:
+
+        -   <div class="flex-col">
+
+            First, go to your repository's **Branches** page and then press the
+            **New pull request** button for the appropriate branch:
+
+            <div class="centered">
+              <img src="static/img/reading00-github-branches.png" class="responsive"/>
+            </div>
+
+        -   <div class="flex-col">
+
+            Next, edit the **Pull Request** title to "Reading 00", write a
+            comment if necessary, assign the appropriate **TA** from the
+            [Reading 00 TA List], and then press the "Create pull request"
+            button.
+
+            <div class="centered">
+              <img src="static/img/reading00-github-pull-request.png" class="responsive"/>
+            </div>
+
+            <div class="alert danger-bg" markdown="1">
+
+            ### <i class="icon icon-medium">{{ "close-octogon" | embed_icon }}</i> Don't Merge!
+
+            **DO NOT MERGE your own Pull Requests**.  The TAs use open **Pull Requests**
+            to keep track of which assignments to grade.  Closing them yourself will
+            confuse the TAs and cause a delay in grading.
+
+            </div>
+
+        -   <div class="flex-col">
+
+            Every commit on [GitHub] will automatically check your quiz or code
+            with [dredd] and the results of each run is displayed in the **Checks**
+            tab of each commit as shown below:
+
+            <div class="centered">
+              <img src="static/img/reading00-github-checks.png" class="responsive"/>
+            </div>
+
+      Once you have made the **Pull Request**, the TA can verify your work and
+      provide feedback via the discussion form inside the **Pull Request**. If
+      necessary, you can update your submission by simply commit and pushing to
+      the appropriate branch; the **Pull Request** will automatically be
+      updated to match your latest work.
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading00` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 00 TA List].
+
+    **Note**: this list changes each week, so be sure to consult the appropriate
+    list for each assignment.
+
+    </div>
+
+    [CSE 30872 Programming Challenges]:     index.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [Reading 00 Quiz]:                      static/json/reading00.json
+    [Reading 00 TA List]:                   reading00_tas.html
+    [GitHub]:                               https://github.com
+    [dredd]:                                https://dredd.h4x0r.space
+    [Zoom]:                                 https://notredame.zoom.us/
+    [Slack]:                                https://nd-cse.slack.com/
+    [HackerRank]:                           https://www.hackerrank.com/
+    [LeetCode]:                             https://leetcode.com/
+    [SSH Keys]:                             https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+    [nd-cse-30872-sp26]:                    https://github.com/nd-cse-30872-sp26
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [JSON]:                                 https://json.org
