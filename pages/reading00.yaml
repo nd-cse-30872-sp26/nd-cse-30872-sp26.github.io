@@ -296,14 +296,14 @@ body:       |
 
         For this class, you must use a **separate [git] branch for each
         assignment**.  This means that the work for each reading and challenge
-        must be done in a separate branch.  To create and checkout a new
+        must be done in a separate branch.  To create and switch to a new
         branch, you can do the following:
 
             :::bash
-            $ git checkout master         # Make sure we are in master branch
+            $ git switch master           # Make sure we are in master branch
             $ git pull --rebase           # Make sure we are up-to-date with github repository
 
-            $ git checkout -b reading00   # Create reading00 branch and check it out
+            $ git switch -c reading00     # Create reading00 branch and check it out
 
         Once you do the above, you should see the following output for the
         [git-branch] command:
