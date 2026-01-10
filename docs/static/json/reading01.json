@@ -1,0 +1,30 @@
+{
+    "q1": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements about <b>dynamic arrays</b> (aka\n<b>vectors</b>) and <b>linked lists</b> (<i>with head and tail\npointers</i>) are true (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "cache_array": "<b>Dynamic arrays</b> generally exhibit poor <b>cache behavior</b>.",
+            "cache_list": "<b>Linked lists</b> generally exhibit poor <b>cache behavior</b>.",
+            "insert_array": "Inserting to the <b>front</b> of a <b>dynamic array</b> is always <code>O(1)</code>.",
+            "insert_list": "Inserting to the <b>front</b> of a <b>linked list</b> is always <code>O(1)</code>.",
+            "append_array": "Appending to the <b>back</b> of a <b>dynamic array</b> is always <code>O(1)</code>.",
+            "append_list": "Appending to the <b>back</b> of a <b>linked list</b> is always <code>O(1)</code>.",
+            "access_array": "Accessing an element in the <b>middle</b> of a <b>dynamic array</b> is <code>O(1)</code>.",
+            "access_list": "Accessing an element in the <b>middle</b> of a <b>linked list</b> is <code>O(1)</code>.",
+            "remove_array": "Removing an element from the <b>middle</b> of a <b>dynamic array</b> is <code>O(n)</code>.",
+            "remove_list": "Removing an element from the <b>middle</b> of a <b>doubly-linked</b> list is <code>O(n)</code>."
+        }
+    },
+    "q2": {
+        "type": "blank",
+        "question": "\n<p>While <b>stacks</b> and <b>queues</b> provide both a <b>(1)</b> ____\noperation to add items and a <b>(2)></b> ____ operation to remove items\nfrom the collection, the former provides <b>(3)</b> ____ ordering while the\nlatter provides <b>(4)</b>____ ordering.</p>\n"
+    },
+    "q3": {
+        "type": "blank",
+        "question": "\n<p>Below is a <b>C++</b> function whose purpose is to <b>reverse the\ncontents of the given vector</b>.  It does this by copying the elements\nfrom the vector into another container and then copying the elements back\nto the original vector.</p>\n\n<p>Fill in the blanks to complete the implementation.</p>\n\n<pre>\nvoid reverse(vector&lt;string&gt; &v) {\n    ____&lt;string&gt; c;         // 1\n\n    for (auto e : v) {\n        ____;               // 2\n    }\n\n    ____;                   // 3\n    while (____) {          // 4\n        ____;               // 5\n        ____;               // 6\n    }\n}\n</pre>\n"
+    },
+    "q4": {
+        "type": "blank",
+        "question": "\n<p>Below is a Python function whose purpose is to <b>reverse the contents\nof the given list</b>.  It does this by copying the elements from the list\ninto another container and then copying the elements back to the original\nlist.</p>\n\n<p>Fill in the blanks to complete the implementation.</p>\n\n<pre>\ndef reverse(v):\n    c = ____                // 1\n\n    for e in v:\n        ____                // 2\n\n    v = ____                // 3\n    while ____:             // 4\n        ____                // 5\n\n    return ____             // 6\n</pre>\n"
+    }
+}
