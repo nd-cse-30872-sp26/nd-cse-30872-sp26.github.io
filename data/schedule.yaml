@@ -6,6 +6,11 @@
         topics:         Syllabus, I/O
         assignments:
           - Reading 00
+        items:
+          - name:       Slides 00
+            link:       https://docs.google.com/presentation/d/1Vc51ZHcp06h2t5oT4dfkUkbkYRq8hCTKIdMMOA7ZFGA/edit?usp=sharing
+          - name:       Slides 01
+            link:       https://docs.google.com/presentation/d/1qlvT5mVqxFkG2QGLqOSBVUpxhs_eSS9fpYatRpErMgQ/edit?usp=sharing
 
       - date:           Wed 01/14
         topics:         Complexity
