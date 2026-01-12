@@ -116,7 +116,7 @@ body:       |
            Grade  1.00 /  1.00
 
         $ git add answers.json                # Add answers.json to staging area
-        $ git commit -m "Reading 01: Done"    # Commit work
+        $ git commit -m "Reading 01: Quiz"    # Commit work
 
         $ git push -u origin reading01        # Push branch to GitHub
 
