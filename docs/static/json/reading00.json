@@ -28,7 +28,7 @@
     },
     "q3": {
         "type": "single",
-        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    for (auto e : a) {\n        if (find(b.begin(), b.end(), e) != b.end()) {\n            c.push_back(e);\n        }\n    }\n}\n</pre>\n",
+        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\n// C++\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    for (auto e : a) {\n        if (find(b.begin(), b.end(), e) != b.end()) {\n            c.push_back(e);\n        }\n    }\n}\n\n# Python\ndef f(a: list[str], b: list[str]) -> list[str]:\n    c = []\n\n    for e in a:\n        if e in b:\n            c.append(e)\n\n    return c\n</pre>\n",
         "responses": {
             "n2": "O(n^2)",
             "1": "O(1)",
@@ -38,7 +38,7 @@
     },
     "q4": {
         "type": "single",
-        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    sort(b.begin(), b.end());\n\n    for (auto e : a) {\n        if (binary_search(b.begin(), b.end(), e)) {\n            c.push_back(e);\n        }\n    }\n}\n</pre>\n",
+        "question": "\n<p>What is the <b>time complexity</b> of the following code?</p>\n\n<pre>\n// C++\nvoid f(vector&lt;string&gt; &a, vector&lt;string&gt; &b, vector&lt;string&gt; &c) {\n    c.clear();\n\n    sort(b.begin(), b.end());\n\n    for (auto e : a) {\n        if (binary_search(b.begin(), b.end(), e)) {\n            c.push_back(e);\n        }\n    }\n}\n\n# Python\ndef f(a: list[str], b: list[str]) -> list[str]:\n    c = []\n\n    b.sort()\n\n    for e in a:\n        if (i := bisect.bisect_left(b, e)) != len(b) and b[i] == e:\n            c.append(e)\n\n    return c\n</pre>\n",
         "responses": {
             "n2": "O(n^2)",
             "1": "O(1)",
