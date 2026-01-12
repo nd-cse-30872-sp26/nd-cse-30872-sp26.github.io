@@ -14,11 +14,17 @@
 
       - date:           Wed 01/14
         topics:         Complexity
+        items:
+          - name:       Slides 02
+            link:       https://docs.google.com/presentation/d/1S0i12yennDy_Vi4fAEzSKgf51IDz-NHDIcyXyJlgUik/edit?usp=sharing
 
       - date:           Fri 01/16
         topics:         Coding Style
         assignments:
           - Challenge 00
+        items:
+          - name:       Slides 03
+            link:       https://docs.google.com/presentation/d/1PMXg_pyo25e9N6xJyy2qBLtoR4lmhVahx5IqOeTkn8g/edit?usp=sharing
 
 - name:     "Sequence Containers"
   days:
