@@ -92,7 +92,8 @@ body:       |
         Unbalanced
 
     <div class="alert danger-bg" markdown="1">
-    #### <i class="fa fa-balance-scale"></i> Algorithmic Complexity
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
 
     For each input test case, your solution should have the following targets:
 
@@ -127,7 +128,7 @@ body:       |
         $ $EDITOR challenge02/program.cpp           # Edit your code
 
         $ git add challenge02/program.cpp           # Stage your changes
-        $ git commit -m "Challenge 03: Code"        # Commit your changes
+        $ git commit -m "Challenge 02: Code"        # Commit your changes
 
         $ git push -u origin challenge02            # Send changes to GitHub
 
@@ -137,8 +138,10 @@ body:       |
         $ .scripts/check.py
         Checking challenge02 program.cpp ...
           Result Success
-            Time 0.02
-           Score 6.00 / 6.00
+            Time  0.00
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
 
         $ curl -F source=@challenge02/program.cpp https://dredd.h4x0r.space/code/cse-30872-sp26/challenge02
         {"result": "Success", "score": 6, "time": 0.016292572021484375, "value": 6, "status": 0}
