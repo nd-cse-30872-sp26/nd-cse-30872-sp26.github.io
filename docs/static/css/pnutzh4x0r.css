@@ -304,6 +304,10 @@ div.footnote > hr {
     display: none;
 }
 
+sup {
+    line-height: 0;
+}
+
 /* Classes */
 
 .flex-row {
