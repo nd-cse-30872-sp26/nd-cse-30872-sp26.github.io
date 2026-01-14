@@ -19,6 +19,8 @@
         items:
           - name:       Slides 02
             link:       https://docs.google.com/presentation/d/1S0i12yennDy_Vi4fAEzSKgf51IDz-NHDIcyXyJlgUik/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2ca18b26-4cb3-4017-9597-b3d20110ef2b
 
       - date:           Fri 01/16
         topics:         Coding Style
