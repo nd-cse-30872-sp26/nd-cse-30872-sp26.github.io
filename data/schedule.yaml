@@ -39,9 +39,15 @@
         topics:         Arrays, Lists
         assignments:
           - Reading 01
+        items:
+          - name:       Slides 04
+            link:       https://docs.google.com/presentation/d/1G__cQHSFzBqT5ndDndiuPPOIXLljFKVzZtmretap-3U/edit?usp=sharing
 
       - date:           Fri 01/23
         topics:         Stacks, Queues
+        items:
+          - name:       Slides 05
+            link:       https://docs.google.com/presentation/d/1h1iATYSMjR2bW2s-SzkV9O9mT4Wa_QKdCPshk3_qVyE/edit?usp=sharing
 
       - date:           Sat 01/24
         topics:         '<i class="muted">Programming Challenges</i>'
@@ -55,9 +61,15 @@
         topics:         Searching
         assignments:
           - Reading 02
+        items:
+          - name:       Slides 06
+            link:       https://docs.google.com/presentation/d/1331ByG6vi8bIhIxoePuw831HxyvYmPCSODBMHvtx52U/edit?usp=sharing
 
       - date:           Wed 01/28
         topics:         Sorting
+        items:
+          - name:       Slides 07
+            link:       https://docs.google.com/presentation/d/1lqcoz9PbY107zfUQ0GM_PtD2F8ZrPeMNShU7aOmZNAw/edit?usp=sharing
 
       - date:           Fri 01/30
         topics:         ''
