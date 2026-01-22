@@ -20,7 +20,9 @@ body:       |
 
     The readings for this week are:
 
-    1. [Competitive Programmer's Handbook]
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
 
         - Chapter 3 Sorting
 
