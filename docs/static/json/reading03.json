@@ -1,0 +1,55 @@
+{
+    "q01": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted to build a music playlist so you can play all of your\nfavorite Taylor Swift songs in order.  Which of the following would be the\nmost appropriate <b>data structure</b> to store your <b>playlist</b>?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q02": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted your music player to keep track of <b>whether or\nnot</b> you have played a Taylor Swift song before.  Which of the following\nwould be the most appropriate <b>data structure</b> to track this\ninformation?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q03": {
+        "type": "single",
+        "question": "\n<p>Suppose you wanted your music player to keep of <b>how many times</b>\nyou have played a Taylor Swift song.  Which of the following would be the\nmost appropriate <b>data structure</b> to track this information?</p>\n",
+        "responses": {
+            "vector": "Vector",
+            "map": "Map",
+            "set": "Set"
+        }
+    },
+    "q04": {
+        "type": "blank",
+        "question": "\n<p>Complete the <code>has_duplicates</code> <b>Python</b> function below,\nwhich returns <code>True</code> if the given list has any duplicates\n(otherwise <code>False</code>).</p>\n\n<pre>\ndef has_duplicates(lst):\n    return ____\n</pre>\n"
+    },
+    "q05": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements are true regarding <b>sets</b> and\n<b>maps</b> in <b>C++</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "ordered_sets_search": "<b>Ordered sets</b> have <code>O(logn)</code> average search times.",
+            "unordered_sets_search": "<b>Unordered sets</b> have <code>O(logn)</code> average search times.",
+            "sets_order": "An <b>ordered set</b> and <b>unordered set</b> with the same elements may iterate through a different sequence of elements.",
+            "ordered_maps_hash": "<b>Ordered maps</b> utilize a <b>hash table</b>.",
+            "unordered_maps_hash": "<b>Unordered maps</b> utilize a <b>hash table</b>."
+        }
+    },
+    "q06": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements are true regarding <b>sets</b> and\n<b>maps</b> in <b>Python</b> (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "sets_immutable": "<b>Sets</b> are <b>immutable</b>.",
+            "sets_declaration": "A <b>set</b> can be declared with <code>{item0, item1, ..., itemN}</code>.",
+            "sets_order": "Iterating over two <b>sets</b> with the same elements always yields the same order.",
+            "dicts_key": "<b>Dictionary</b> keys can be any object including <code>strings</code>, <code>ints</code>, <code>floats</code>, and <code>lists</code>.",
+            "dicts_declaration": "An empty <b>dictionary</b> can be declared with either <code>dict()</code> or <code>{}</code>."
+        }
+    }
+}
