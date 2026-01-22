@@ -1,0 +1,143 @@
+title:      "Reading 03: Associative Containers"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [associative containers]
+    such as [sets], [maps], and [hash tables].  Being able to utilize these
+    data structures will allow you to solve problems such as those found in
+    [Challenge 05] and [Challenge 06].
+
+    [Challenge 05]: challenge05.html
+    [Challenge 06]: challenge06.html
+
+    [associative containers]:   https://en.wikipedia.org/wiki/Associative_containers
+    [sets]:                     https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+    [maps]:                     https://en.wikipedia.org/wiki/Associative_array
+    [hash tables]:              https://en.wikipedia.org/wiki/Hash_table
+
+    ## Reading
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        -   <div class="flex-col" markdown="1">
+
+            Chapter 4 Data Structures
+
+            *Focus on sections 4.2 Set structures and 4.3 Map structures.*
+
+    </div>
+
+    <div class="flex-col" markdown="1">
+
+    ### Optional
+
+    Here are some optional resources:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [C++] standard library:
+
+        - [set](http://en.cppreference.com/w/cpp/container/set)
+        - [map](http://en.cppreference.com/w/cpp/container/map)
+        - [unordered_set](http://en.cppreference.com/w/cpp/container/unordered_set)
+        - [unordered_map](http://en.cppreference.com/w/cpp/container/unordered_map)
+
+    2.  <div class="flex-col" markdown="1">
+
+        [Python] standard library:
+
+        - [set](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+        - [dict](https://docs.python.org/3/library/stdtypes.html#typesmapping)
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    </div>
+
+    </div>
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 03 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading03.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 00]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git switch -c reading03             # Create reading03 branch and check it out
+
+        $ cd reading03                        # Go into reading03 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading03 quiz
+        Checking reading03 quiz ...
+             Q01  1.00 /  1.00
+             Q02  1.00 /  1.00
+             Q03  1.00 /  1.00
+             Q04  1.00 /  1.00
+             Q05  3.00 /  3.00
+             Q06  2.00 /  2.00
+          --------------------
+           Score  9.00 /  9.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 03: Quiz"    # Commit work
+
+        $ git push -u origin reading03        # Push branch to GitHub
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading03` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 03 TA List].
+
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 00]:                           reading00.html
+    [Reading 03 Quiz]:                      static/json/reading03.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Reading 03 TA List]:                   reading03_tas.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+
