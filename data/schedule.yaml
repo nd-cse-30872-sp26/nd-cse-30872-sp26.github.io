@@ -52,6 +52,8 @@
         items:
           - name:       Slides 05
             link:       https://docs.google.com/presentation/d/1h1iATYSMjR2bW2s-SzkV9O9mT4Wa_QKdCPshk3_qVyE/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cdf85f7e-9b94-4332-8f2b-b3db0112b8ae
 
       - date:           Sat 01/24
         topics:         '<i class="muted">Programming Challenges</i>'
