@@ -89,7 +89,7 @@ body:       |
 
     For each input test case, your solution should have the following targets:
 
-    <table class="bordered" style="background-color: white" markdown="1">
+    <table class="bordered" markdown="1">
     <tbody markdown="1">
     <tr class="caution-bg" markdown="1">
       <td width="125px" markdown="1">**Time Complexity**</td>
