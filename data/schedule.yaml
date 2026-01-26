@@ -70,6 +70,8 @@
         items:
           - name:       Slides 06
             link:       https://docs.google.com/presentation/d/1331ByG6vi8bIhIxoePuw831HxyvYmPCSODBMHvtx52U/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=16dc4e99-5345-45a3-bc6f-b3de01128eae
 
       - date:           Wed 01/28
         topics:         Sorting
