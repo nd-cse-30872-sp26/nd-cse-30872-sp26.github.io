@@ -130,13 +130,15 @@ body:       |
 
         :::bash
         $ .scripts/submit.py
-        Checking challenge05 code ...
+        Checking challenge05 program.cpp ...
           Result Success
-            Time 1.81
-           Score 6.00 / 6.00
+            Time  0.41
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
 
         $ curl -F source=@challenge05/program.cpp https://dredd.h4x0r.space/code/cse-30872-sp26/challenge05
-        {"result": "Success", "score": 6, "time": 1.80951787948608398}
+        {"result": "Success", "score": 6, "time": 0.41436338424682617, "value": 6, "status": 0}
 
     <div class="alert warning-bg" markdown="1">
 
