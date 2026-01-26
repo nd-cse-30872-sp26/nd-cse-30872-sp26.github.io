@@ -92,7 +92,7 @@ body:       |
     <table class="bordered" markdown="1">
     <tbody markdown="1">
     <tr class="caution-bg" markdown="1">
-      <td width="125px" markdown="1">**Time Complexity**</td>
+      <td width="155px" markdown="1">**Time Complexity**</td>
       <td markdown="1">`O(log(N))`, where `N` is the length of each input array.</td>
     </tr>
     <tr class="warning-bg" markdown="1">

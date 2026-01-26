@@ -105,7 +105,7 @@ body:       |
     <table class="bordered" markdown="1">
     <tbody markdown="1">
     <tr class="warning-bg" markdown="1">
-      <td width="125px" markdown="1">**Time Complexity**</td>
+      <td width="155px" markdown="1">**Time Complexity**</td>
       <td markdown="1">`O(N*M)`, where `N` and `M` correspond to the dimensions of each matrix.</td>
     </tr>
     <tr class="caution-bg" markdown="1">

@@ -69,7 +69,7 @@ body:       |
     <table class="bordered" markdown="1">
     <tbody markdown="1">
     <tr class="warning-bg" markdown="1">
-      <td width="125px" markdown="1">**Time Complexity**</td>
+      <td width="155px" markdown="1">**Time Complexity**</td>
       <td markdown="1">`O(S1 + S2)`, where `S1` and `S2` correspond to the lengths of each word in the input pair.</td>
     </tr>
     <tr class="caution-bg" markdown="1">
