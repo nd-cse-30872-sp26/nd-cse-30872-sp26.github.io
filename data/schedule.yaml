@@ -96,12 +96,21 @@
         topics:         Maps, Sets
         assignments:
           - Reading 03
+        items:
+          - name:       Slides 08
+            link:       https://docs.google.com/presentation/d/1E32uEwozUqwBIVDkdvcywgKiRkvYoH7DVT4O2p0goCA/edit?usp=sharing
 
       - date:           Wed 02/04
         topics:         Memoization
+        items:
+          - name:       Slides 08
+            link:       https://docs.google.com/presentation/d/1E32uEwozUqwBIVDkdvcywgKiRkvYoH7DVT4O2p0goCA/edit?usp=sharing
 
       - date:           Fri 02/06
         topics:         History
+        items:
+          - name:       Slides 08
+            link:       https://docs.google.com/presentation/d/1E32uEwozUqwBIVDkdvcywgKiRkvYoH7DVT4O2p0goCA/edit?usp=sharing
 
       - date:           Sat 02/07
         topics:         '<i class="muted">Programming Challenges</i>'
