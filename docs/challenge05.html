@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="static/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="static/ico/favicon-16x16.png">
+<link rel="manifest" href="static/ico/site.webmanifest">
+<!-- Stylesheets -->
+<link rel="stylesheet" href="static/css/pnutzh4x0r.css">
+<title>Challenge 05: Collatz Conjecture</title>
+</head>
+<body>
+<header>
+<a class="logo" href="challenge05.html">
+    <h1>Challenge 05: Collatz Conjecture</h1>
+</a>
+<nav>
+    <ul>
+        <li><a href="index.html"><h4>Home</h4></a></li>
+        </ul>
+</nav></header>
+<main>
+<p>Problems in Computer Science are often classified as belonging to a certain
+class of problems (e.g. NP, Unsolvable, Recursive, etc.).  In this problem you
+will be analyzing a property of an algorithm whose classification is not known
+for all possible inputs:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span> <span class="nb">input</span> <span class="n">n</span>
+<span class="mf">2.</span> <span class="nb">print</span> <span class="n">n</span>
+<span class="mf">3.</span> <span class="k">if</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">then</span> <span class="n">STOP</span>
+<span class="mf">4.</span>      <span class="k">if</span> <span class="n">n</span> <span class="ow">is</span> <span class="n">odd</span> <span class="n">then</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="mf">5.</span>      <span class="k">else</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="mf">6.</span> <span class="n">GOTO</span> <span class="mi">2</span>
+</code></pre></div>
+
+<p>Given the input <code>22</code>, the following sequence of numbers would be printed:</p>
+<blockquote>
+<p><code>22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1</code></p>
+</blockquote>
+<p>It is <a href="https://en.wikipedia.org/wiki/Collatz_conjecture">conjectured</a> that the algorithm above will terminate (when a <code>1</code> is
+printed) for any integral input value.  Despite the simplicity of the
+algorithm, it is unknown whether this conjecture is true.  It has been
+verified, however, for all integers <code>n</code> such that <code>1 &lt;= n &lt;= 1,000,000</code>
+(and, in fact, for many more numbers than this.)</p>
+<p>Given an input <code>n</code>, it is possible to determine the number of numbers
+printed before and including the <code>1</code> is printed.  For a given <code>n</code> this is
+called the <em>cycle-length</em> of <code>n</code>.  In the example above, the cycle length
+of <code>22</code> is <code>16</code>.</p>
+<p>For any two integers <code>i</code> and <code>j</code> you are to determine the maximum cycle
+length over all numbers between and including both <code>i</code> and <code>j</code>.</p>
+<h2 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h2>
+<p>The input will consist of a series of pairs of integers <code>i</code> and <code>j</code>, one
+pair of integers per line, where the integers will be between <code>1</code> and
+<code>1,000,000</code> (inclusive).</p>
+<p>You should process all pairs of integers and for each pair determine the
+maximum cycle length over all integers between and including <code>i</code> and <code>j</code>.</p>
+<h3 id="example-input">Example Input<a class="headerlink" href="#example-input" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>1 10
+100 200
+201 210
+900 1000
+</code></pre></div>
+
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<p>For each pair of input integers <code>i</code> and <code>j</code> you should output <code>i</code>, <code>j</code>, the
+number with the maximum cycle length for integers between and including <code>i</code>
+and <code>j</code>, and the length of this maximum cycle as shown below:</p>
+<h3 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>1 10 9 20
+100 200 171 125
+201 210 206 89
+900 1000 937 174
+</code></pre></div>
+
+<p><strong>Note</strong>: The integers <code>i</code> and <code>j</code> must appear in the output in the same
+order in which they appeared in the input and should be followed by the
+number with the maximum cycle length, and then maximum cycle length (on the
+same line).  If there are multiple numbers with the maximum cycle length,
+choose the smallest number.</p>
+<div class="alert info-bg">
+<h3 id="trophy-embed_icon-programming-challenges"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>trophy</title><path d="M18 2C17.1 2 16 3 16 4H8C8 3 6.9 2 6 2H2V11C2 12 3 13 4 13H6.2C6.6 15 7.9 16.7 11 17V19.08C8 19.54 8 22 8 22H16C16 22 16 19.54 13 19.08V17C16.1 16.7 17.4 15 17.8 13H20C21 13 22 12 22 11V2H18M6 11H4V4H6V11M20 11H18V4H20V11Z" /></svg>
+</i> Programming Challenges<a class="headerlink" href="#trophy-embed_icon-programming-challenges" title="Permanent link">&para;</a></h3>
+<p>This is based on <a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=36">The 3n + 1
+problem</a>
+on the <a href="https://uva.onlinejudge.org">UVa Online Judge</a> and "Problem 13.16" of <a href="http://elementsofprogramminginterviews.com/">Elements of Programming
+Interviews</a>.</p>
+</div>
+<div class="alert danger-bg">
+<h3 id="scale-balance-embed_icon-algorithmic-complexity"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>scale-balance</title><path d="M12,3C10.73,3 9.6,3.8 9.18,5H3V7H4.95L2,14C1.53,16 3,17 5.5,17C8,17 9.56,16 9,14L6.05,7H9.17C9.5,7.85 10.15,8.5 11,8.83V20H2V22H22V20H13V8.82C13.85,8.5 14.5,7.85 14.82,7H17.95L15,14C14.53,16 16,17 18.5,17C21,17 22.56,16 22,14L19.05,7H21V5H14.83C14.4,3.8 13.27,3 12,3M12,5A1,1 0 0,1 13,6A1,1 0 0,1 12,7A1,1 0 0,1 11,6A1,1 0 0,1 12,5M5.5,10.25L7,14H4L5.5,10.25M18.5,10.25L20,14H17L18.5,10.25Z" /></svg>
+</i> Algorithmic Complexity<a class="headerlink" href="#scale-balance-embed_icon-algorithmic-complexity" title="Permanent link">&para;</a></h3>
+<p>For each input test case, your solution should have the following targets:</p>
+<table class="bordered">
+<tbody>
+<tr class="caution-bg">
+<td width="155px"><strong>Time Complexity</strong></td>
+<td><code>O(N^3)</code>, where <code>N</code> is the largest of the pair of input integers.</td>
+</tr>
+<tr class="warning-bg">
+<td><strong>Space Complexity</strong></td>
+<td><code>O(N^2)</code> where <code>N</code> is the largest of the pair of input integers.</td>
+</tr>
+</tbody>
+</table>
+<p>Your solution may be below the targets, but it <strong>should not exceed them</strong>.</p>
+</div>
+<h2 id="submission">Submission<a class="headerlink" href="#submission" title="Permanent link">&para;</a></h2>
+<p>To submit your work, follow the same procedure you used for <a href="reading00.html">Reading 00</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>path/to/cse-30872-sp26-assignments<span class="w">     </span><span class="c1"># Go to assignments repository</span>
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>master<span class="w">                         </span><span class="c1"># Make sure we are on master</span>
+$<span class="w"> </span>git<span class="w"> </span>pull<span class="w"> </span>--rebase<span class="w">                         </span><span class="c1"># Pull any changes from GitHub</span>
+
+$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>challenge05<span class="w">                 </span><span class="c1"># Create and checkout challenge05 branch</span>
+
+$<span class="w"> </span><span class="nv">$EDITOR</span><span class="w"> </span>challenge05/program.cpp<span class="w">           </span><span class="c1"># Edit your code</span>
+
+$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>challenge05/program.cpp<span class="w">           </span><span class="c1"># Stage your changes</span>
+$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Challenge 05: Code&quot;</span><span class="w">        </span><span class="c1"># Commit your changes</span>
+
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>challenge05<span class="w">            </span><span class="c1"># Send changes to GitHub</span>
+</code></pre></div>
+
+<p>To check your code, you can use the <code>.scripts/check.py</code> script or <a href="https://curl.haxx.se/">curl</a>:</p>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>.scripts/submit.py
+Checking<span class="w"> </span>challenge05<span class="w"> </span>program.cpp<span class="w"> </span>...
+<span class="w">  </span>Result<span class="w"> </span>Success
+<span class="w">    </span>Time<span class="w">  </span><span class="m">0</span>.41
+<span class="w">  </span>--------------------
+<span class="w">   </span>Score<span class="w">  </span><span class="m">6</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">6</span>.00
+<span class="w">   </span>Grade<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span>/<span class="w">  </span><span class="m">1</span>.00
+
+$<span class="w"> </span>curl<span class="w"> </span>-F<span class="w"> </span><span class="nv">source</span><span class="o">=</span>@challenge05/program.cpp<span class="w"> </span>https://dredd.h4x0r.space/code/cse-30872-sp26/challenge05
+<span class="o">{</span><span class="s2">&quot;result&quot;</span>:<span class="w"> </span><span class="s2">&quot;Success&quot;</span>,<span class="w"> </span><span class="s2">&quot;score&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;time&quot;</span>:<span class="w"> </span><span class="m">0</span>.41436338424682617,<span class="w"> </span><span class="s2">&quot;value&quot;</span>:<span class="w"> </span><span class="m">6</span>,<span class="w"> </span><span class="s2">&quot;status&quot;</span>:<span class="w"> </span><span class="m">0</span><span class="o">}</span>
+</code></pre></div>
+
+<div class="alert warning-bg">
+<h3 id="lifebuoy-embed_icon-acknowledgments"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>lifebuoy</title><path d="M19.79,15.41C20.74,13.24 20.74,10.75 19.79,8.59L17.05,9.83C17.65,11.21 17.65,12.78 17.06,14.17L19.79,15.41M15.42,4.21C13.25,3.26 10.76,3.26 8.59,4.21L9.83,6.94C11.22,6.35 12.79,6.35 14.18,6.95L15.42,4.21M4.21,8.58C3.26,10.76 3.26,13.24 4.21,15.42L6.95,14.17C6.35,12.79 6.35,11.21 6.95,9.82L4.21,8.58M8.59,19.79C10.76,20.74 13.25,20.74 15.42,19.78L14.18,17.05C12.8,17.65 11.22,17.65 9.84,17.06L8.59,19.79M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+</i> Acknowledgments<a class="headerlink" href="#lifebuoy-embed_icon-acknowledgments" title="Permanent link">&para;</a></h3>
+<p>If you collaborated with any other students, or received help from TAs or AI
+tools on this assignment, please record this support in the <code>README.md</code> in
+the <code>challenge05</code> folder and include it with your <strong>Pull Request</strong>.</p>
+</div>
+<div class="alert success-bg">
+<h3 id="account-question-embed_icon-graders"><i class="icon icon-medium"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>account-question</title><path d="M13,8A4,4 0 0,1 9,12A4,4 0 0,1 5,8A4,4 0 0,1 9,4A4,4 0 0,1 13,8M17,18V20H1V18C1,15.79 4.58,14 9,14C13.42,14 17,15.79 17,18M20.5,14.5V16H19V14.5H20.5M18.5,9.5H17V9A3,3 0 0,1 20,6A3,3 0 0,1 23,9C23,9.97 22.5,10.88 21.71,11.41L21.41,11.6C20.84,12 20.5,12.61 20.5,13.3V13.5H19V13.3C19,12.11 19.6,11 20.59,10.35L20.88,10.16C21.27,9.9 21.5,9.47 21.5,9A1.5,1.5 0 0,0 20,7.5A1.5,1.5 0 0,0 18.5,9V9.5Z" /></svg>
+</i> Graders<a class="headerlink" href="#account-question-embed_icon-graders" title="Permanent link">&para;</a></h3>
+<p>Once you have committed your work and pushed it to <a href="https://github.com">GitHub</a>, remember to
+create a <strong>pull request</strong> and assign it to the appropriate <strong>teaching
+assistant</strong> from the <a href="reading03_tas.html">Reading 03 TA List</a>.</p>
+<p><strong>Note</strong>: this list changes each week, so be sure to consult the appropriate
+list for each assignment.</p>
+</div>
+</main>
+<footer>
+Built using <a href="https://python.org">Python</a>
+and <a href="https://jinja.palletsprojects.com">Jinja</a>
+with colors from <a href="https://nordtheme.com">Nord Theme</a>
+and icons from <a href="https://pictogrammers.com/library/mdi/">Material Design Icons</a>.</footer>
+</body>
+</html>
