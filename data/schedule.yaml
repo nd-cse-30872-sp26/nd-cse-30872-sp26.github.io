@@ -95,7 +95,7 @@
 - name:     "Associative Containers"
   days:
       - date:           Mon 02/02
-        topics:         Maps, Sets
+        topics:         Sets, Maps
         assignments:
           - Reading 03
         items:
@@ -126,12 +126,20 @@
         topics:         Subsets
         assignments:
           - Reading 04
+        items:
+          - name:       Slides 09
+            link:       https://docs.google.com/presentation/d/1MRx3D65LMWvvsWnRc_wWXG1LkmIMAiSNlE5dO9RbbOo/edit?usp=sharing
 
       - date:           Wed 02/11
         topics:         Permutations, Backtracking
+        items:
+          - name:       Slides 09
+            link:       https://docs.google.com/presentation/d/1MRx3D65LMWvvsWnRc_wWXG1LkmIMAiSNlE5dO9RbbOo/edit?usp=sharing
+
 
       - date:           Fri 02/13
         topics:         Advent of Code I
+        comment:        https://adventofcode.com/2025/day/7
 
       - date:           Sat 02/14
         topics:         '<i class="muted">Programming Challenges</i>'
