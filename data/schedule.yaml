@@ -138,8 +138,7 @@
 
 
       - date:           Fri 02/13
-        topics:         Advent of Code I
-        comment:        https://adventofcode.com/2025/day/7
+        topics:         '<a href="https://adventofcode.com/2025/day/7">Advent of Code I</i>'
 
       - date:           Sat 02/14
         topics:         '<i class="muted">Programming Challenges</i>'
