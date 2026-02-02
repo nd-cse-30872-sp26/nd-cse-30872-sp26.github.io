@@ -1,0 +1,18 @@
+{
+    "q1": {
+        "type": "blank",
+        "question": "\n<p>\nHow many subsets of <code>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</code> are divisible by\n<code>3</code> (that is the sum of the all the elements in the subset is divisble by 3)?\n</p>\n\n<p>Write a program that computes this and enter in the number below.</p>\n\n____\n\n<p>\nNote: As shown in the book, order does not matter when defining a subset.  Therefore,\n<code>{0, 1, 2}</code> and <code>{1, 0, 2}</code> counts as one set.\n</p>\n"
+    },
+    "q2": {
+        "type": "blank",
+        "question": "\n<p>\n\nComplete the C++ code below so that the program prints all permutations of\n\"ABC\": <code>ABC, ACB, BAC, BCA, CAB, CBA</code>.\n\n</p>\n\n<pre>\nint main(int argc, char *argv[]) {\n    string s = \"ABC\";\n    ____(s.begin(), s.end());           // 1\n    do {\n        cout << ____ << endl;           // 2\n    } while (____(s.begin(), s.end()))  // 3\n\n    return 0;\n}\n</pre>\n"
+    },
+    "q3": {
+        "type": "blank",
+        "question": "\n<p>\n\nComplete the Python code below so that the program prints all permutations\nof \"ABC\": <code>ABC, ACB, BAC, BCA, CAB, CBA</code>.\n\n</p>\n\n<pre>\nimport ____             # 1\n\ns = \"ABC\"\nfor p in ____(s):       # 2\n    print ''.____(p)    # 3\n\n</pre>\n"
+    },
+    "q4": {
+        "type": "blank",
+        "question": "\n<p>\n\nA <b>(1)</b> ____ algorithm starts with an empty solution and extends the\nsolution step by step by <b>(2)</b> ____ searching through all the\ndifferent ways a solution can be constructed.  Because this can be quite\nexhaustive, we may wish to add \"intelligence\" to our search by <b>(3)</b>\n____ the search tree, which means eliminating a candidate solution if we\ncan determine that it is a dead end.\n\n</p>\n"
+    }
+}
