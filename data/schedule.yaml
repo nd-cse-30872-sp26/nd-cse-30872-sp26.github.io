@@ -101,6 +101,8 @@
         items:
           - name:       Slides 08
             link:       https://docs.google.com/presentation/d/1E32uEwozUqwBIVDkdvcywgKiRkvYoH7DVT4O2p0goCA/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=45c45f4a-a81f-481f-ba12-b3e50113ec52
 
       - date:           Wed 02/04
         topics:         Memoization
