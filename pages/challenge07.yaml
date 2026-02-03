@@ -1,0 +1,179 @@
+title:      "Challenge 07: Triplets"
+body:       |
+
+    <div class="flex-row" markdown="1">
+
+    <div class="flex-col" markdown="1">
+
+    Abigail and Madeline, the instructor's daughters, are identical twins who
+    love dancing, singing, drawing, knitting, and performing at [South Bend
+    Civic Theatre][^1].  The girls are always making up stories, composing
+    music, crafting things, or playing with their Pokemon.  When it comes to
+    math, however, the twins are not quite so fond of playing around with
+    numbers [^2]...
+
+    For the past few days, Abigail and Madeline have been working on the
+    <b>triplet</b> problem:
+
+    > Given a list of **numbers** with `n` integers, determine if there are
+    elements `a`, `b`, `c`, in **numbers** such that `a + b + c = 0`.  Find all
+    unique **triplets** in the list of **numbers**.
+
+    For example, given the following numbers:
+
+        :::text
+        -1 0 1 2 -1 -4
+
+    Abi and Maddy see that you can make the following **triplets**:
+
+        :::text
+        -1 + -1 + 2
+        -1 + 0 + 1
+
+    </div>
+
+    <div class="flex-col-33" markdown="1">
+      <img src="static/img/challenge07-twins.jpg" class="responsive">
+    </div>
+
+    </div>
+
+    For small sequences of numbers, the twins are comfortable using trial and
+    error (ie. guess and check) to find **triplets**.  Unfortunately, their
+    father is mean and is giving them problems with larger sequences of
+    numbers.
+
+    They would like your help in automating the process of searching for
+    **triplets** using the magic of **programming**!
+
+    [South Bend Civic Theatre]: https://sbct.org/
+
+    ## Input
+
+    You will be given a series of numbers, one sequence per line as shown
+    below:
+
+    ### Example Input
+
+        :::text
+        -1 0 1 2 -1 -4
+
+    ## Output
+
+    For each sequence of numbers, print out all the **triplets** in **ascending
+    order**:
+
+    ### Example Output
+
+        :::text
+        -1 + -1 + 2
+        -1 + 0 + 1
+
+    <div class="alert warning-bg" markdown="1">
+
+    **Note**: Output the numbers in **ascending order** and ensure there is a
+      single **blank line** between the outputs of each input sequence of
+      numbers.
+
+    </div>
+
+    <div class="alert info-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "trophy" | embed_icon }}</i> Programming Challenges
+
+    This problem is inspired by [3Sum] on [LeetCode].
+
+    </div>
+
+    <div class="alert danger-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "scale-balance" | embed_icon }}</i> Algorithmic Complexity
+
+    For each input test case, your solution should have the following targets:
+
+    <table class="bordered" markdown="1">
+    <tbody markdown="1">
+    <tr class="caution-bg" markdown="1">
+      <td width="155px" markdown="1">**Time Complexity**</td>
+      <td markdown="1">`O(2^N)`, where `N` is the length of each input sequence.</td>
+    </tr>
+    <tr class="danger-bg" markdown="1">
+      <td markdown="1">**Space Complexity**</td>
+      <td markdown="1">`O(2^N)`, where `N` is the length of each input sequence.</td>
+    </tr>
+    </tbody>
+    </table>
+
+    Your solution may be below the targets, but it **should not exceed them**.
+
+    </div>
+
+    [3Sum]: https://leetcode.com/problems/3sum/
+    [LeetCode]: https://leetcode.com/
+
+    [^1]: The girls will be performing in [Diary of a Wimpy Kid: The Musical](https://ci.ovationtix.com/35243/production/1251670) next month!
+    [^2]: Actually, not true.  They do like math and are quite good at it.
+      Probably get it from their mother.
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 00]:
+
+        :::bash
+        $ cd path/to/cse-30872-sp26-assignments     # Go to assignments repository
+        $ git switch master                         # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git switch -b challenge07                 # Create and checkout challenge07 branch
+
+        $ $EDITOR challenge07/program.cpp           # Edit your code
+
+        $ git add challenge07/program.cpp           # Stage your changes
+        $ git commit -m "Challenge 07: Code"        # Commit your changes
+
+        $ git push -u origin challenge07            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/check.py` script or [curl]:
+
+        :::bash
+        $ .scripts/check.py
+        Checking challenge07 program.cpp ...
+          Result Success
+            Time  0.03
+          --------------------
+           Score  6.00 /  6.00
+           Grade  1.00 /  1.00
+
+        $ curl -F source=@challenge07/program.cpp https://dredd.h4x0r.space/code/cse-30872-sp26/challenge07
+        {"result": "Success", "score": 6, "time": 0.11464905738830566, "value": 6, "status": 0}
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `challenge07` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 04 TA List].
+
+    **Note**: this list changes each week, so be sure to consult the appropriate
+    list for each assignment.
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
+    [Reading 04 TA List]: reading04_tas.html
+
+    [HackerRank]: https://www.hackerrank.com
+    [LeetCode]: https://leetcode.com
+    [curl]: https://curl.haxx.se/
