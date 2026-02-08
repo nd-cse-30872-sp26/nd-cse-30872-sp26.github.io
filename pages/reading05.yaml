@@ -1,0 +1,107 @@
+title:      "Reading 05: Bit Manipulation, Greedy Algorithms"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [greedy algorithms], which
+    is a problem solving approach where we attempt to find a global optimum by
+    always making the locally optimal choice, and [bit manipulation].  These
+    techniques will come in handy for solving [Challenge 09] and [Challenge
+    10].
+
+    [Challenge 09]: challenge09.html
+    [Challenge 10]: challenge10.html
+
+    [Bit Manipulation]:     https://en.wikipedia.org/wiki/Bit_manipulation
+    [Greedy Algorithms]:    https://en.wikipedia.org/wiki/Greedy_algorithm
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+      
+        [Competitive Programmer's Handbook]
+
+        - Chapter 10 Bit manipulation
+
+        - Chapter 6 Greedy Algorithm
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 05 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading05.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 00]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git switch -b reading05             # Create reading05 branch and check it out
+
+        $ cd reading05                        # Go into reading05 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading05 quiz
+        Checking reading05 quiz ...
+              Q1  4.00 /  4.00
+              Q2  2.00 /  2.00
+              Q3  1.00 /  1.00
+              Q4  1.00 /  1.00
+          --------------------
+           Score  8.00 /  8.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 05: Quiz"    # Commit work
+
+        $ git push -u origin reading05        # Push branch to GitHub
+
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading05` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 05 TA List].
+
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 00]:                           reading00.html
+    [Reading 05 Quiz]:                      static/json/reading05.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [create a merge request]:               https://docs.gitlab.com/ee/gitlab-basics/add-merge-request.html
+    [Reading 05 TA List]:                   reading05_tas.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html

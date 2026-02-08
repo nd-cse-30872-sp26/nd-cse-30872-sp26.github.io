@@ -1,0 +1,30 @@
+{
+    "q1": {
+        "type": "blank",
+        "question": "\n<p>Complete the following script utilizing <b>bitsets</b> in <b>Python</b>:</p>\n\n<pre>\nelements = (1, 2, 4)\nbitset   = ____                     # 1. Initialize bitset\n\n# Add elements to bitset\nfor i in elements:\n    bitset = ____                   # 2. Add element to bitset\n\n# Print contents of bitset\nprint(bitset)                       # A. After adding alements to bitset\n\n# Test for elements in bitset\nfor i in range(6):\n    if ____:                        # 3. Test if element is in bitset\n        print(i)\n\n# Remove elements from bitset\nfor i in elements:\n    bitset = _____                  # 4. Remove element from bitset\n\n# Print contents of bitset\nprint(bitset)                       # B. After removing elements from bitset\n</pre>\n"
+    },
+    "q2": {
+        "type": "blank",
+        "question": "\n<p>Given a completed version of the bitset Python script above, what values\nare printed at the lines marked by the comments:\n</p>\n\n<p>\n<b>A.</b> ____ After adding elements to bitset.\n</p>\n\n<p>\n<b>B.</b> ____ After removing elements from bitset.\n</p>\n"
+    },
+    "q3": {
+        "type": "multiple",
+        "question": "\n<p>In regards to <b>greedy algorithms</b>, which of the following\nstatements are true (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "approach": "A greedy algorithm constructs a solution by choosing the best option at the moment.",
+            "backtrack": "A greedy algorithm will backtrack when it finds a suboptimal solution.",
+            "guarantee": "A greedy algorithm is guaranteed to find the optimal solution.",
+            "efficiency": "A greedy algorithm tends to be very efficient."
+        }
+    },
+    "q4": {
+        "type": "single",
+        "question": "\n<p>Given n events with their starting and ending times, which of the\nfollowing <b>greedy strategies</b> is considered optimal?</p>\n",
+        "responses": {
+            "shortest": "Always choose the event with the shortest time first.",
+            "begin": "Always choose the event with the earliest start time first.",
+            "end": "Always choose the event with the earliest end time first.",
+            "osclass": "I am not in operating systems."
+        }
+    }
+}
