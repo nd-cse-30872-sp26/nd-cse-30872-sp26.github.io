@@ -143,10 +143,14 @@
         items:
           - name:       Slides 09
             link:       https://docs.google.com/presentation/d/1MRx3D65LMWvvsWnRc_wWXG1LkmIMAiSNlE5dO9RbbOo/edit?usp=sharing
-
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=9e25c769-0940-4c5b-9bf6-b3ee01127e91
 
       - date:           Fri 02/13
         topics:         '<a href="https://adventofcode.com/2025/day/7">Advent of Code I</i>'
+        items:
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=19abdf7e-5a2c-4017-a358-b3f00110c7a6
 
       - date:           Sat 02/14
         topics:         '<i class="muted">Programming Challenges</i>'
