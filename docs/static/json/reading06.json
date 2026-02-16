@@ -1,0 +1,21 @@
+{
+    "q1": {
+        "type": "multiple",
+        "question": "\n<p>Regarding <b>dynamic programming</b>, which of the following statements is true\n(<i>choose all that apply?</i>)</p>\n",
+        "responses": {
+            "technique": "<b>Dynamic programming</b> combines the correctness of <b>complete search</b> and the efficiency of </b>greedy algorithms</b>.",
+            "optimal": "<b>Dynamic programming</b> is useful in finding an optimal solution.",
+            "count": "<b>Dynamic programming</b> can be used to calculate the total number of possible solutions.",
+            "memoization": "<b>Dynamic programming</b> utilizes <b>memoization</b>.",
+            "overlapping": "<b>Dynamic programming</b> is utilized when the problem can be divided into independent overlapping subproblems."
+        }
+    },
+    "q2": {
+        "type": "blank",
+        "question": "\n<p>Memoization is a technique that <b>(1)</b> ____ values in a container\nsuch as an <b>(2)</b> ____ after <b>(3)</b> ____ them.  For each parameter\nin a <b>(4)</b> ____ function, the value of the function is calculated\n<b>(5)</b> ____, and after this, the value can be directly retrieved from\nthe container.</p>\n"
+    },
+    "q3": {
+        "type": "blank",
+        "question": "\n<p>Implement a solution to the coins problem (denominations <code>1</code>,\n<code>3</code>, <code>4</code>) using dynamic programming and determine the\n<u>minimum number of coins</u> necessary to form the following sums:</p>\n\n<pre>\n1. 17 = ____\n2. 33 = ____\n3. 64 = ____\n4. 71 = ____\n5. 99 = ____\n</pre>\n"
+    }
+}
