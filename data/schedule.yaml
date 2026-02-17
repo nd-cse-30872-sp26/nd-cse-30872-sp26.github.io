@@ -192,9 +192,15 @@
         topics:         Memoization (Again)
         assignments:
           - Reading 06
+        items:
+          - name:       Slides 12
+            link:       https://docs.google.com/presentation/d/1IEzcDYFRd5MExfU8UXhGl0s1qD3-0R5leqoXACLybRA/edit?usp=sharing
 
       - date:           Wed 02/25
         topics:         Table Building
+        items:
+          - name:       Slides 12
+            link:       https://docs.google.com/presentation/d/1IEzcDYFRd5MExfU8UXhGl0s1qD3-0R5leqoXACLybRA/edit?usp=sharing
 
       - date:           Fri 02/27
         topics:         '<a href="https://adventofcode.com/2025/day/3">Advent of Code II</i>'
