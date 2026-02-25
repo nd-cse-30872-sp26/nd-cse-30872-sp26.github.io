@@ -205,6 +205,8 @@
         items:
           - name:       Slides 12
             link:       https://docs.google.com/presentation/d/1IEzcDYFRd5MExfU8UXhGl0s1qD3-0R5leqoXACLybRA/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e41259d4-2a64-4e85-b0fb-b3fc01139c0d
 
       - date:           Fri 02/27
         topics:         '<a href="https://adventofcode.com/2025/day/3">Advent of Code II</i>'
@@ -221,16 +223,20 @@
         topics:         ''
         items:
           - name:       Interview 01
+            link:       interview01.html
 
       - date:           Wed 03/04
         topics:         ''
         items:
           - name:       Interview 01
+            link:       interview01.html
 
       - date:           Fri 03/06
         topics:         ''
         items:
           - name:       Interview 01
+            link:       interview01.html
+
         assignments:
           - External 01
 
