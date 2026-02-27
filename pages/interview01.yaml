@@ -1,0 +1,54 @@
+title:      Interview 01
+body:       |
+
+    Next week, you will have the opportunity to demonstrate your mastery of the
+    skills and concepts discussed in **Unit 01: Data Structures and Algorithms** to
+    the instructor or a teaching assistant in a `30` minute in-person **coding
+    interview**.
+
+    This interview involve:
+
+    1. **Code Review**: You will be asked to discuss the **data structure** and
+      **algorithm** you used in a previous **Challenge**.
+
+    2. **Live Challenge**: You will be asked to solve a programming **Challenge**.
+
+    ## Scheduling
+
+    To schedule a **coding interview** appointment, put your **netid** (ie.
+    `pbui`) in an open cell in a timeslot with an interviewer in the following:
+
+    <div class="centered">
+      <a class="badge warning-btn" href="https://docs.google.com/spreadsheets/d/10VCESPKNSuuGoA1Z5YFOcaB3jEk0ZjFTqNcMtMr26ow/edit?usp=sharing" target="_new" style="font-size: 150%;">Interview 01 Spreadsheet</a>
+    </div>
+
+    The location of the interviewer can be found in the **Locations** tab of
+    the [Interview 01 Spreadsheet].
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "calendar-clock" | embed_icon }}</i> Scheduling Deadline
+
+    For planning purposes, please schedule your **Interview 01** appointment by
+    **midnight, Friday, February 27**.
+
+    You may only signup for **one** appointment timeslot.
+
+    </div>
+
+    [Interview 01 Spreadsheet]: https://docs.google.com/spreadsheets/d/10VCESPKNSuuGoA1Z5YFOcaB3jEk0ZjFTqNcMtMr26ow/edit?usp=sharing
+    
+    <div class="alert caution-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "alert" | embed_icon }}</i> Consulting Resources
+
+    As with your **Reading** and **Homework** assignments, you are allowed to
+    consult the course texts, slides, notes, the Internet, and even **AI
+    tools**.  However, you cannot communicate with anyone else nor can you ask
+    an **AI tool** to generate a solution.
+
+    Be mindful that the interviewer is assessing your **proficiency** and how
+    much you have **internalized**.  Over reliance on any external resource
+    will be viewed **negatively** in regards to your **mastery** of the material.
+
+    </div>
