@@ -253,12 +253,21 @@
         topics:         Representation
         assignments:
           - Reading 07
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1-j12Y6f9e8XVKOPiUYr6FgEQd1qyUEyUXlHSer16ehI/edit?usp=sharing
 
       - date:           Wed 03/18
         topics:         Traversal
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1-j12Y6f9e8XVKOPiUYr6FgEQd1qyUEyUXlHSer16ehI/edit?usp=sharing
 
       - date:           Fri 03/20
         topics:         Divide and Conquer
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1-j12Y6f9e8XVKOPiUYr6FgEQd1qyUEyUXlHSer16ehI/edit?usp=sharing
 
       - date:           Sat 03/21
         topics:         '<i class="muted">Programming Challenges</i>'
