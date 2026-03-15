@@ -17,7 +17,7 @@
     },
     "q3": {
         "type": "order",
-        "question": "\n<p>Given the following <b>binary tree</b>, enumerate the order in which nodes are\nprocessed in a <code>pre-order</code> traversal:</p>\n\n<center>\n<p>\n<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/300px-Binary_search_tree.svg.png\"\n</p>\n</center>\n\n<p>Consider writing code that represents this tree and then performing the\ntraversal to determine this solution.</p>\n",
+        "question": "\n<p>Given the following <b>binary tree</b>, enumerate the order in which nodes are\nprocessed in a <code>pre-order</code> traversal:</p>\n\n<center>\n<p>\n<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/330px-Binary_search_tree.svg.png\">\n</p>\n</center>\n\n<p>Consider writing code that represents this tree and then performing the\ntraversal to determine this solution.</p>\n",
         "responses": {
             "8": 8,
             "3": 3,
