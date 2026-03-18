@@ -264,6 +264,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1-j12Y6f9e8XVKOPiUYr6FgEQd1qyUEyUXlHSer16ehI/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8556d446-6472-4bb3-9d93-b4110101ecd8
 
       - date:           Fri 03/20
         topics:         Divide and Conquer
