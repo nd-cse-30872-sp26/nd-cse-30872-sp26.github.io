@@ -1,0 +1,44 @@
+{
+    "q1": {
+        "type": "order",
+        "question": "\n<p>Match the <b>path</b> terms below to the following definitions:</p>\n\n<ol>\n  <li>Number of edges in a path.</li>\n  <li>When the first and last node in a path is the same.</li>\n  <li>When each node appears at most once in a path.</li>\n</ol>\n",
+        "responses": {
+            "cycle": "Cycle",
+            "simple": "Simple",
+            "length": "Length"
+        }
+    },
+    "q2": {
+        "type": "order",
+        "question": "\n<p>Match the <b>graph</b> terms below to the following definitions:</p>\n\n<ol>\n  <li>There exists a path between any two nodes in a graph.</li>\n  <li>When edges can only be traversed in one direction.</li>\n  <li>When each edge has a corresponding cost.</li>\n  <li>When every node has the same degree.</li>\n  <li>When every node has a degree <i>n - 1</i>.</li>\n</ol>\n",
+        "responses": {
+            "directed": "Directed",
+            "complete": "Complete",
+            "connected": "Connected",
+            "regular": "Regular",
+            "weighted": "Weighted"
+        }
+    },
+    "q3": {
+        "type": "multiple",
+        "question": "\n<p>Given the following <b>graph representations</b>:</p>\n\n<pre>\nGraph 1 (Adjacency Matrix)        Graph 2 (Adjacency List)\n0 1 0 1                           A: B D\n0 0 0 1                           B: A C D\n0 1 0 0                           C: B D\n0 0 1 0                           D: A B C\n</pre>\n\n<p>Which of the following statements are true (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "graph1directed": "Graph 1 is directed.",
+            "graph2directed": "Graph 2 is directed.",
+            "graph1acyclic": "Graph 1 is acyclic.",
+            "graph2acyclic": "Graph 2 is acyclic.",
+            "graph1connected": "Graph 1 is connected.",
+            "graph2connected": "Graph 2 is connected."
+        }
+    },
+    "q4": {
+        "type": "multiple",
+        "question": "\n<p>Given Graph 1 (assume you have nodes labeled A, B, C, D) in Question 3,\nwhich of the following are valid traversal orders starting from A (<i>choose\nall that apply</i>)?</p>\n",
+        "responses": {
+            "dfs1": "DFS: A, B, D, C",
+            "dfs2": "DFS: A, C, B, D",
+            "bfs1": "BFS: A, D, B, C",
+            "bfs2": "BFS: A, C, B, D"
+        }
+    }
+}
