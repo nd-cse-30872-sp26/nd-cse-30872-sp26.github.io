@@ -51,7 +51,7 @@ body:       |
 
     ## Submission
 
-    To submit you work, follow the same process outlined in [Reading 01]:
+    To submit you work, follow the same process outlined in [Reading 00]:
 
         :::bash
         $ git switch master                   # Make sure we are in master branch
@@ -99,7 +99,7 @@ body:       |
     </div>
 
     [GitHub]: https://github.com
-    [Reading 01]: reading01.html
+    [Reading 00]: reading00.html
     [Reading 08 Quiz]: static/json/reading08.json
     [Reading 08 TA List]: reading08_tas.html
     [JSON]: http://www.json.org/
