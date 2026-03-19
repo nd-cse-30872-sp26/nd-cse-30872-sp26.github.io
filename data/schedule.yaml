@@ -285,9 +285,15 @@
         topics:         Representation
         assignments:
           - Reading 08
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1IwKwcJq1siBqy2dLz4trPSPsvGazaIgDOV7beGMRINo/edit?usp=sharing
 
       - date:           Wed 03/25
         topics:         Traversal
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1IwKwcJq1siBqy2dLz4trPSPsvGazaIgDOV7beGMRINo/edit?usp=sharing
 
       - date:           Fri 03/27
         topics:         Advent of Code III
