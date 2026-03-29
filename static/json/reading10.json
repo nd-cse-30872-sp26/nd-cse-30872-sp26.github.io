@@ -1,0 +1,30 @@
+{
+    "q01": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements regarding spanning trees is true (<i>choose\nall that apply</i>)?</p>\n",
+        "responses": {
+            "spanning": "In a spanning tree, there is path between any two nodes in the graph.",
+            "acyclic": "Spanning trees are both connected and acyclic.",
+            "single": "There is usually only one way to form a spanning tree.",
+            "minimum": "A minimum spanning tree is a spanning tree that has the least amount of weight as possible.",
+            "maximum": "A maximum spanning tree is a spanning tree that has the most amount of edges as possible.",
+            "unique": "There is usually only one unique minimum spanning tree in a graph.",
+            "greedy": "We can use greedy algorithms to construct minimum spanning trees.",
+            "priority": "To implement Prim's algorithm, we can use a priority queue."
+        }
+    },
+    "q02": {
+        "type": "multiple",
+        "question": "\n<p>Given the following graph, which of the following orders are\n<b>topological sorts</b> (<i>choose all that apply</i>)?</p>\n\n<div class=\"centered\">\n<img src=\"static/img/reading10-tsort.png\">\n</div>\n\n</strong>\n",
+        "responses": {
+            "one": "A, B, C, D, E, F, G, H",
+            "two": "C, A, B, E, D, F, G, H",
+            "three": "A, B, C, E, D, H, G, F",
+            "four": "B, A, D, C, H, E, G, F",
+            "five": "A, D, H, F, G, E, B, C",
+            "six": "C, B, E, A, D, H, F, G",
+            "seven": "A, B, D, F, C, E, G, H",
+            "eight": "B, A, D, F, C, G, H, E"
+        }
+    }
+}

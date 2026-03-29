@@ -10,7 +10,8 @@ body:       |
 
     [Challenge 18]: challenge18.html
     [Challenge 19]: challenge19.html
-    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+    [graphs]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+    [DAG]: https://en.wikipedia.org/wiki/Directed_acyclic_graph
 
     ## Reading
 
@@ -20,8 +21,8 @@ body:       |
 
         [Competitive Programmer's Handbook]
 
-        - 15. Spanning Trees
-        - 16. Directed Graphs
+        - <p>15. Spanning Trees</p>
+        - <p>16. Directed Graphs</p>
 
     [C++]:      https://isocpp.org/
     [Python]:   https://www.python.org/
@@ -57,6 +58,11 @@ body:       |
 
         $ ../.scripts/check.py                # Check reading10 quiz
         Checking reading10 quiz ...
+             Q01  5.00 /  5.00
+             Q02  6.00 /  6.00
+          --------------------
+           Score 11.00 / 11.00
+           Grade  1.00 /  1.00
           Status Success
 
         $ git add answers.json                # Add answers.json to staging area
