@@ -1,0 +1,99 @@
+title:      "Reading 09: Graphs (Shortest Paths)"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will continue to work on problems related to [graphs] and
+    will focus on computing the shortest path in a graph.  Understanding these
+    concepts will be necessary to solve [Challenge 17].
+
+    [Challenge 17]: challenge17.html
+    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - <p>13. Shortest paths</p>
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 09 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading09.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 00]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading09             # Create reading09 branch and check it out
+
+        $ cd reading09                        # Go into reading09 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading09 quiz
+        Checking reading09 quiz ...
+             Q01  5.00 /  5.00
+             Q02  9.00 /  9.00
+          --------------------
+           Score 14.00 / 14.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 09: Quiz"    # Commit work
+
+        $ git push -u origin reading09        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading09` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 09 TA List].
+
+    </div>
+
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
+    [Reading 09 Quiz]: static/json/reading09.json
+    [Reading 09 TA List]: reading09_tas.html
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]: https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
