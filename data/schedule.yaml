@@ -317,6 +317,9 @@
         topics:         Shortest Paths
         assignments:
           - Reading 09
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1PAVVnefvkA4C9c2JRpbM9TJi-eVNQekYakztw0dwPvo/edit?usp=sharing
 
       - date:           Wed 04/01
         topics:         '<i class="muted">Office Hours</i>'
