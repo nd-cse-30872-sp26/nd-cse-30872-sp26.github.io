@@ -337,9 +337,15 @@
         topics:         Spanning Trees
         assignments:
           - Reading 10
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1s4ADlvIzMavlZcwn-BM7Qbe5Q299VhuUo9KhQQr6lZY/edit?usp=sharing
 
       - date:           Fri 04/10
         topics:         Topological Sorting
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1s4ADlvIzMavlZcwn-BM7Qbe5Q299VhuUo9KhQQr6lZY/edit?usp=sharing
 
       - date:           Sat 04/11
         topics:         '<i class="muted">Programming Challenges</i>'
