@@ -1,0 +1,18 @@
+{
+    "q01": {
+        "type": "multiple",
+        "question": "\n<p>Which of the following statements are true regarding <b>Dijkstra's\nalgorithm</b> for finding shortest paths (<i>choose all that\napply</i>)?</p>\n",
+        "responses": {
+            "negative": "The algorithm requires that there are no negative edge weights.",
+            "efficient": "The algorithm is efficient and can proccess large graphs.",
+            "shortest": "The algorithm only computes the shortest path from one node to another specific node.",
+            "greedy": "The algorithm is an example of a greedy algorithm.",
+            "dynamic": "The algorithm is an example of dynamic programming.",
+            "priority": "The algorithm can be implemented with a priority queue."
+        }
+    },
+    "q02": {
+        "type": "blank",
+        "question": "\n<p>Complete the following <b>Python</b> implementation of <b>Dijsktra's\nalgorithm</b> on a graph in the form of an <b>adjacency list</b>:</p>\n\n<pre>\ndef sssp(graph: dict[str, dict[str, int]], start: str) -> dict[str, int]:\n    frontier: list[tuple[int, str]] = ____ # 1. Vertices we know about\n    visited:  dict[str, int]        = ____ # 2. Vertices we have already seen\n\n    while frontier:\n        distance, vertex = ____            # 3. Get next highest priority vertex\n\n        if ____:                           # 4. Check if already seen\n            continue\n\n        ____ = distance                    # 5. Mark already seen\n\n        for neighbor, weight in ____:      # 6. Iterate through neighbors\n            ____                           # 7. Add neighbors to priority queue\n\n    return ____                            # 8. Return seen vertices\n</pre>\n"
+    }
+}
