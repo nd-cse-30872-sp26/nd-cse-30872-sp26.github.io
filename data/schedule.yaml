@@ -320,6 +320,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1PAVVnefvkA4C9c2JRpbM9TJi-eVNQekYakztw0dwPvo/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b0d76cf5-72c6-4720-84c1-b41d0102f214
 
       - date:           Wed 04/01
         topics:         '<i class="muted">Office Hours</i>'
