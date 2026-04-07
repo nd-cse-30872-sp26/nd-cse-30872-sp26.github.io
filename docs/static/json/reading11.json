@@ -1,0 +1,45 @@
+{
+    "q01": {
+        "type": "blank",
+        "question": "\n<p>A path that goes through each edge exactly once is called an <b>(1)</b>\n____ path, while a path that visits each node exactly once is a <b>(2)</b>\n____ path.  A variant of either type of path that starts and ends at the\nsame node is called a <b>(3)</b> ____.\n\nWhile there are efficient methods of determining if the former exists in a\ngraph, the existence of the latter is considered a <b>(4)</b> ____ problem,\nwhere no efficient algorithm is known for solving the problem.</p>\n"
+    },
+    "q02": {
+        "type": "multiple",
+        "question": "\n<p>For an <b>Eulerian path</b> to exist in a graph, which of the following\nconditions are sufficient (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "even": "The <b>degree</b> of each node is even.",
+            "odd_even": "The <b>degree</b> of exactly two nodes is odd, and the <b>degree</b> of all other nodes is even.",
+            "odd": "The <b>degree</b> of each node is odd.",
+            "even_odd": "The <b>degree</b> of exactly two nodes is even, and the <b>degree</b> of all other nodes is odd."
+        }
+    },
+    "q03": {
+        "type": "multiple",
+        "question": "\n<p>For a Hamiltonian path to exist in a graph, which of the following\nconditions are sufficient (<i>choose all that apply</i>)?</p>\n",
+        "responses": {
+            "complete": "The graph is <b>complete</b>.",
+            "connected": "The graph is <b>connected</b>.",
+            "degree": "The <b>degree</b> of each node is at least n/2.",
+            "sum": "The sum of the <b>degrees</b> of each non-adjacent pair of nodes is at least n.",
+            "even": "The <b>degree</b> of each node is even."
+        }
+    },
+    "q04": {
+        "type": "multiple",
+        "question": "\n<p>Given the following graph, which of the following statements is true\n(<i>choose all that apply</i>)?</p>\n\n<div class=\"centered\">\n  <img src=\"static/img/reading11-euler.png\">\n</div>\n",
+        "responses": {
+            "epath": "There is an <b>Eulerian path</b>.",
+            "ecircuit": "There is an <b>Eulerian circuit</b>.",
+            "hpath": "There is an <b>Hamiltonian path</b>.",
+            "hcircuit": "There is an <b>Hamiltonian circuit</b>."
+        }
+    },
+    "q05": {
+        "type": "blank",
+        "question": "\n<p>In a <b>(1)</b> ____ problem, we are interested in determining how much\nflow is possible to send from the <b>(2)</b> ____ to the <b>(3)</b> ____,\nwhile in a <b>(4)</b> ____ problem, we want to know the <b>(5)</b> ____ set\nof edges that separates the two nodes of the graph.</p>\n"
+    },
+    "q06": {
+        "type": "blank",
+        "question": "\n<p>Given the following graph:</p>\n\n<div class=\"centered\">\n  <img src=\"static/img/reading11-flow.png\">\n</div>\n\n<p>\n<ol>\n  <li>What is the maximum flow from 1 to 5? ____</li>\n  <li>What is the minimum cut from 1 to 5? ____</li>\n  <li>How many edges are in the minimum cut? ____</li>\n</ol>\n</p>\n"
+    }
+}
