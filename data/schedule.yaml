@@ -362,9 +362,15 @@
         topics:         Paths
         assignments:
           - Reading 11
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1u9_HJZ8KDjJBAepRK9MRo1_fBKCEDT9vLRoryvWMGMU/edit?usp=sharing
 
       - date:           Wed 04/15
         topics:         Flows and Cuts
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1u9_HJZ8KDjJBAepRK9MRo1_fBKCEDT9vLRoryvWMGMU/edit?usp=sharing
 
       - date:           Fri 04/17
         items:
@@ -382,9 +388,15 @@
         topics:         Primes and Modular Arithmetic
         assignments:
           - Reading 12
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1G9vRIiGVuDYAFXi_3uq3IZEqFJ99M4NuAuDh4Haull8/edit?usp=sharing
 
       - date:           Wed 04/22
         topics:         Graduate School
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1cgUq-CFP8hjbvxYO_64ofx4IcKaO0wQ8-gGsexKJjrw/edit?usp=sharing
 
       - date:           Fri 04/24
         topics:         ''
