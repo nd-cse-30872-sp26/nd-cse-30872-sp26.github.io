@@ -1,0 +1,107 @@
+title:      "Reading 11: Graphs (Paths, Flows)"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on more problems related to [graphs] and will focus
+    on [hamiltonian paths] and [min-flow/max-cut] problems.  Understanding
+    these concepts will be necessary to solve [Challenge 20] and [Challenge
+    21].
+
+    [Challenge 20]: challenge20.html
+    [Challenge 21]: challenge21.html
+    [graphs]: https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+    [hamiltonian paths]: https://en.wikipedia.org/wiki/Hamiltonian_path
+    [min-flow/max-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - <p>19 Paths and circuits</p>
+        - <p>20 Flows and cuts</p>
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 11 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading11.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 00]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git switch -c reading11             # Create reading11 branch and check it out
+
+        $ cd reading11                        # Go into reading11 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading11 quiz
+        Checking reading11 quiz ...
+             Q01  4.00 /  4.00
+             Q02  2.00 /  2.00
+             Q03  3.00 /  3.00
+             Q04  3.00 /  3.00
+             Q05  5.00 /  5.00
+             Q06  3.00 /  3.00
+          --------------------
+           Score 20.00 / 20.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 11: Quiz"    # Commit work
+
+        $ git push -u origin reading11        # Push branch to github
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading11` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 11 TA List].
+
+    </div>
+
+    [GitHub]: https://github.com
+    [Reading 00]: reading00.html
+    [Reading 11 Quiz]: static/json/reading11.json
+    [Reading 11 TA List]: reading11_tas.html
+    [JSON]: http://www.json.org/
+    [git-branch]: https://git-scm.com/docs/git-branch
+    [dredd]: https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]: https://cses.fi/book.html
+    [C++]: https://isocpp.org/
+    [Python]: https://www.python.org/
