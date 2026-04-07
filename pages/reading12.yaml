@@ -1,0 +1,101 @@
+title:      "Reading 12: Primes, Modular Arithmetic"
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on a problem related to [number theory] and will
+    focus on [primes] and [modular arithmetic].  Understanding these
+    concepts will be necessary to solve [Challenge 22].
+
+    [Challenge 21]:         challenge22.html
+    [number theory]:        https://en.wikipedia.org/wiki/Number_theory
+    [primes]:               https://en.wikipedia.org/wiki/Prime_number
+    [modular arithmetic]:   https://en.wikipedia.org/wiki/Modular_arithmetic
+
+    ## Reading
+
+    The readings for this week are:
+
+    1.  <div class="flex-col" markdown="1">
+
+        [Competitive Programmer's Handbook]
+
+        - <p>21 Number theory</p>
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 12 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading12.json');
+    </script>
+
+    <pre style="display: none;" id="dr-container" class="codehilite"><code id="dredd-response"></code></pre>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 00]:
+
+        :::bash
+        $ git switch master                   # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git switch -c reading12             # Create reading12 branch and check it out
+
+        $ cd reading12                        # Go into reading12 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/check.py                # Check reading12 quiz
+        Checking reading12 quiz ...
+             Q01  1.00 /  1.00
+             Q02  3.00 /  3.00
+             Q03  5.00 /  5.00
+             Q04  4.00 /  4.00
+          --------------------
+           Score 13.00 / 13.00
+           Grade  1.00 /  1.00
+          Status Success
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 12: Done"    # Commit work
+
+        $ git push -u origin reading12        # Push branch to GitHub
+
+    <div class="alert warning-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "lifebuoy" | embed_icon }}</i> Acknowledgments
+
+    If you collaborated with any other students, or received help from TAs or AI
+    tools on this assignment, please record this support in the `README.md` in
+    the `reading12` folder and include it with your **Pull Request**.
+
+    </div>
+
+    <div class="alert success-bg" markdown="1">
+
+    ### <i class="icon icon-medium">{{ "account-question" | embed_icon }}</i> Graders
+
+    Once you have committed your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the appropriate **teaching
+    assistant** from the [Reading 12 TA List].
+
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 00]:                           reading00.html
+    [Reading 12 Quiz]:                      static/json/reading12.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Reading 12 TA List]:                   reading12_tas.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+
