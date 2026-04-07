@@ -103,7 +103,7 @@ body:       |
     path selects cells with lower numerical **IDs** from as shown in the third
     example.
 
-    <div class="alert alert-warning" markdown="1">
+    <div class="alert warning-bg" markdown="1">
     **Note**, in the first example, we choose the path `0 1 6 10 15` instead of
     `0 1 6 7 11 15` because from the perspective of `15` node `10` has a lower
     numerical **ID** than node `11`.
