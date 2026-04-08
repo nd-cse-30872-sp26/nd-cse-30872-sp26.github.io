@@ -38,7 +38,7 @@ body:       |
     After some surveying, he comes across a challenging problem about [minimum
     spanning trees]:
 
-    > Given an [undirected graph] in the form of an [adjaceny matrix], determine
+    > Given an [undirected graph] in the form of an [adjacency matrix], determine
     the **weight** of the [minimum spanning tree] and its associated **edges**.
 
     <div class="centered">
@@ -80,7 +80,7 @@ body:       |
     [WWDC23]: https://developer.apple.com/wwdc23/
     [DailyProgrammer]: https://old.reddit.com/r/DailyProgrammer
     [undirected graph]: https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#Undirected_graph
-    [adjaceny matrix]: https://en.wikipedia.org/wiki/Adjacency_matrix
+    [adjacency matrix]: https://en.wikipedia.org/wiki/Adjacency_matrix
     [minimum spanning tree]: https://en.wikipedia.org/wiki/Minimum_spanning_tree
     [minimum spanning trees]: https://en.wikipedia.org/wiki/Minimum_spanning_tree
     [distance matrix]: https://en.wikipedia.org/wiki/Distance_matrix
