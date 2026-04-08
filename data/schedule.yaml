@@ -342,6 +342,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1s4ADlvIzMavlZcwn-BM7Qbe5Q299VhuUo9KhQQr6lZY/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ba19d0dc-2c62-45c5-af94-b42600ffead7
 
       - date:           Fri 04/10
         topics:         Topological Sorting
