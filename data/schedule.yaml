@@ -350,6 +350,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1s4ADlvIzMavlZcwn-BM7Qbe5Q299VhuUo9KhQQr6lZY/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5cab7206-8c6d-4708-9cf1-b4280102a409
 
       - date:           Sat 04/11
         topics:         '<i class="muted">Programming Challenges</i>'
