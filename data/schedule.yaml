@@ -369,6 +369,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1u9_HJZ8KDjJBAepRK9MRo1_fBKCEDT9vLRoryvWMGMU/edit?usp=sharing
+          - name:       Panopto
+            link:       https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1dabc146-03ee-4c0e-9dbf-b42b0104a414
 
       - date:           Wed 04/15
         topics:         Flows and Cuts
