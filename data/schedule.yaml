@@ -410,6 +410,7 @@
         topics:         ''
         items:
           - name:       Interview 02
+            link:       interview02.html
 
       - date:           Sat 04/25
         topics:         '<i class="muted">Programming Challenges</i>'
